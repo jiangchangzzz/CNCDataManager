@@ -1,0 +1,1 @@
+C:\Users\peter\Desktop\CNC\Mworks\Simulation\Z_axis\MWSolver.exe -s C:\Users\peter\Desktop\CNC\Mworks\Simulation\Z_axis\Setting.txt -r C:\Users\peter\Desktop\CNC\Mworks\Simulation\Z_axis\Z_data.msf

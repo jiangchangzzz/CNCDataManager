@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html ng-app="simulationApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>主页-数控机床数据库管理系统</title>
+    <link rel="shortcut icon" href="~/Assets/favicon.ico" />
+    @Styles.Render("~/Content/css")
+
+    <link href="~/Areas/Simulation/App/css/reset.css" rel="stylesheet" />
+    <link href="~/Areas/Simulation/App/css/index.css" rel="stylesheet" />
+    <link href="~/Areas/Simulation/App/css/simulation.css" rel="stylesheet" />
+
+    @RenderSection("css", required: false)
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("数控机床数据管理", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/Home/Index" class="home-index-nav-link">主页</a></li>
+                    <li><a href="/CNCData/Index" class="home-index-nav-link">查看数据</a></li>
+                    <li>@Html.RouteLink("进入选型", "Selection_default", new { controller="Selection",action="Index"},new { @class= "home-index-nav-link" })</li>
+                    <li>@Html.RouteLink("开始仿真","Simulation_default", new { controller = "Simulation", action = "Index" }, new { @class = "home-index-nav-link" })</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+    <div class="body-content">
+        <div class="jumbotron header-banner">
+            <div class="container">
+                <h1>数控系统仿真</h1>
+                <p>开始数控系统仿真</p>
+                <p><a class="btn btn-primary btn-lg" role="button">了解更多</a></p>
+            </div>
+        </div>
+
+        @RenderBody()
+    </div>
+
+    <hr />
+    <footer>
+        <div class="index-footer">
+            <div class="index-container clearfloat">
+                <div class="footer-col">
+                    <p>地址：湖北省武汉市<br />洪山区珞瑜路1037号</p>
+                    <p>邮编：430074</p>
+                </div>
+                <div class="footer-col">
+                    <p>电话：027-87541114</p>
+                    <p>传真：027-87545438</p>
+                </div>
+                <div class="footer-col">
+                    <p><a href="#">Blog</a></p>
+                    <p><a href="#">Contact</a></p>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-logo"></div>
+                    <p>&copy; 2015-@DateTime.Now.Year 版权所有-华中科技大学<br />机械科学与工程学院数控中心 </p>
+                    <p>CNC Data Hub All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-ui-router.min.js"></script>
+
+    <script src="~/Areas/Simulation/App/js/app.js"></script>
+    <script src="~/Areas/Simulation/App/js/homeCtrl.js"></script>
+    <script src="~/Areas/Simulation/App/js/paraSettingCtrl.js"></script>
+    <script src="~/Areas/Simulation/App/js/services.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

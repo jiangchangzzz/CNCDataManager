@@ -1,0 +1,1 @@
+C:\Users\peter\Desktop\CNC\Mworks\Simulation\X_axis\MWSolver.exe -s C:\Users\peter\Desktop\CNC\Mworks\Simulation\X_axis\Setting.txt -r C:\Users\peter\Desktop\CNC\Mworks\Simulation\X_axis\X_data.msf

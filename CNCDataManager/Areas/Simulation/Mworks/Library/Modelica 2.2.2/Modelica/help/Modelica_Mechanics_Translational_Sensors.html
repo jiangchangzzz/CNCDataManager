@@ -1,0 +1,147 @@
+<HTML>
+<HEAD>
+<TITLE>Modelica.Mechanics.Translational.Sensors</TITLE>
+<META name="HTML-Generator" content="Dymola">
+<META name="description" content="&quot;Sensors for 1-dim. translational mechanical quantities&quot;">
+<style type="text/css">
+*       { font-size: 10pt; font-family: Arial,sans-serif; }
+pre     { font-size:  9pt; font-family: Courier,monospace;}
+h4      { font-size: 10pt; font-weight: bold; color: green; }
+h3      { font-size: 11pt; font-weight: bold; color: green; }
+h2      { font-size: 13pt; font-weight: bold; color: green; }
+address {                  font-weight: normal} 
+td      { solid #000; vertical-align:top; }
+th      { solid #000; vertical-align:top; font-weight: bold; }
+table   { solid #000; border-collapse: collapse;}
+</style>
+</HEAD>
+<BODY><P>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE Sensors<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><A NAME="Modelica.Mechanics.Translational.Sensors"></A><A HREF="Modelica_Mechanics_Translational.html#Modelica.Mechanics.Translational"
+>Modelica.Mechanics.Translational</A>.Sensors</H2>
+<B>Sensors for 1-dim. translational mechanical quantities</B>
+<P>
+<H3>Information</H3>
+<PRE></pre>
+  
+<pre></PRE><P>
+<H3>Package Content</H3><p>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2 >
+<TR><TH >Name</TH><TH>Description</TH></TR>
+<TR><TD><IMG SRC="Modelica.Mechanics.Translational.Sensors.ForceSensorS.png" ALT="Modelica.Mechanics.Translational.Sensors.ForceSensor" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Mechanics_Translational_Sensors.html#Modelica.Mechanics.Translational.Sensors.ForceSensor"
+>ForceSensor</A>
+</TD><TD>Ideal sensor to measure the force between two flanges</TD></TR>
+<TR><TD><IMG SRC="Modelica.Mechanics.Translational.Sensors.PositionSensorS.png" ALT="Modelica.Mechanics.Translational.Sensors.PositionSensor" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Mechanics_Translational_Sensors.html#Modelica.Mechanics.Translational.Sensors.PositionSensor"
+>PositionSensor</A>
+</TD><TD>Ideal sensor to measure the absolute position</TD></TR>
+<TR><TD><IMG SRC="Modelica.Mechanics.Translational.Sensors.PositionSensorS.png" ALT="Modelica.Mechanics.Translational.Sensors.SpeedSensor" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Mechanics_Translational_Sensors.html#Modelica.Mechanics.Translational.Sensors.SpeedSensor"
+>SpeedSensor</A>
+</TD><TD>Ideal sensor to measure the absolute velocity</TD></TR>
+<TR><TD><IMG SRC="Modelica.Mechanics.Translational.Sensors.PositionSensorS.png" ALT="Modelica.Mechanics.Translational.Sensors.AccSensor" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Mechanics_Translational_Sensors.html#Modelica.Mechanics.Translational.Sensors.AccSensor"
+>AccSensor</A>
+</TD><TD>Ideal sensor to measure the absolute acceleration</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE ForceSensor<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica.Mechanics.Translational.Sensors.ForceSensorI.png" ALT="Modelica.Mechanics.Translational.Sensors.ForceSensor" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica.Mechanics.Translational.Sensors.ForceSensor"></A><A HREF="Modelica_Mechanics_Translational_Sensors.html#Modelica.Mechanics.Translational.Sensors"
+>Modelica.Mechanics.Translational.Sensors</A>.ForceSensor</H2>
+<B>Ideal sensor to measure the force between two flanges</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Measures the <i>cut-force between two flanges</i> in an ideal way
+and provides the result as output signal (to be further processed
+with blocks of the Modelica.Blocks library).
+</p>
+ 
+<pre>
+</PRE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD>flange_a</TD><TD>(left) driving flange (flange axis directed INTO cut plane, e. g. from left to right)</TD></TR>
+<TR><TD>flange_b</TD><TD>(right) driven flange (flange axis directed OUT OF cut plane)</TD></TR>
+<TR><TD>f</TD><TD>force in flange_a and flange_b (f = flange_a.f = -flange_b.f)</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE PositionSensor<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica.Mechanics.Translational.Sensors.PositionSensorI.png" ALT="Modelica.Mechanics.Translational.Sensors.PositionSensor" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica.Mechanics.Translational.Sensors.PositionSensor"></A><A HREF="Modelica_Mechanics_Translational_Sensors.html#Modelica.Mechanics.Translational.Sensors"
+>Modelica.Mechanics.Translational.Sensors</A>.PositionSensor</H2>
+<B>Ideal sensor to measure the absolute position</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Measures the <i>absolute position s</i> of a flange in an ideal way and provides the result as
+output signals (to be further processed with blocks of the
+Modelica.Blocks library).
+</p>
+ 
+<pre>
+</PRE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD>flange_a</TD><TD>flange to be measured (flange axis directed INTO cut plane, e. g. from left to right)</TD></TR>
+<TR><TD>s</TD><TD>Absolute position of flange as output signal</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE SpeedSensor<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica.Mechanics.Translational.Sensors.SpeedSensorI.png" ALT="Modelica.Mechanics.Translational.Sensors.SpeedSensor" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica.Mechanics.Translational.Sensors.SpeedSensor"></A><A HREF="Modelica_Mechanics_Translational_Sensors.html#Modelica.Mechanics.Translational.Sensors"
+>Modelica.Mechanics.Translational.Sensors</A>.SpeedSensor</H2>
+<B>Ideal sensor to measure the absolute velocity</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Measures the <i>absolute velocity v</i> of a flange in an ideal way and provides the result as
+output signals (to be further processed with blocks of the
+Modelica.Blocks library).
+</p>
+ 
+<pre>
+</PRE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD>flange_a</TD><TD>flange to be measured (flange axis directed INTO cut plane, e. g. from left to right)</TD></TR>
+<TR><TD>v</TD><TD>Absolute velocity of flange as output signal</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE AccSensor<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica.Mechanics.Translational.Sensors.AccSensorI.png" ALT="Modelica.Mechanics.Translational.Sensors.AccSensor" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica.Mechanics.Translational.Sensors.AccSensor"></A><A HREF="Modelica_Mechanics_Translational_Sensors.html#Modelica.Mechanics.Translational.Sensors"
+>Modelica.Mechanics.Translational.Sensors</A>.AccSensor</H2>
+<B>Ideal sensor to measure the absolute acceleration</B><p>
+<H3>Information</H3>
+<PRE></pre>
+<p>
+Measures the <i>absolute acceleration a</i>
+of a flange in an ideal way and provides the result as
+output signals (to be further processed with blocks of the
+Modelica.Blocks library).
+</p>
+ 
+<pre>
+</PRE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD>flange_a</TD><TD>flange to be measured (flange axis directed INTO cut plane, e. g. from left to right)</TD></TR>
+<TR><TD>a</TD><TD>Absolute acceleration of flange as output signal</TD></TR>
+</TABLE>
+<HR>
+<address>HTML-documentation generated by <a href="http://www.dynasim.se/">Dymola</a> Thu Feb 28 10:57:27 2008.
+</address></BODY>
+</HTML>

@@ -1,0 +1,147 @@
+<HTML>
+<HEAD>
+<TITLE>Modelica.Electrical.Machines.Examples.Utilities</TITLE>
+<META name="HTML-Generator" content="Dymola">
+<META name="description" content="&quot;Library with auxiliary models for testing&quot;">
+<style type="text/css">
+*       { font-size: 10pt; font-family: Arial,sans-serif; }
+pre     { font-size:  9pt; font-family: Courier,monospace;}
+h4      { font-size: 10pt; font-weight: bold; color: green; }
+h3      { font-size: 11pt; font-weight: bold; color: green; }
+h2      { font-size: 13pt; font-weight: bold; color: green; }
+address {                  font-weight: normal} 
+td      { solid #000; vertical-align:top; }
+th      { solid #000; vertical-align:top; font-weight: bold; }
+table   { solid #000; border-collapse: collapse;}
+</style>
+</HEAD>
+<BODY><P>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE Utilities<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><A NAME="Modelica.Electrical.Machines.Examples.Utilities"></A><A HREF="Modelica_Electrical_Machines_Examples.html#Modelica.Electrical.Machines.Examples"
+>Modelica.Electrical.Machines.Examples</A>.Utilities</H2>
+<B>Library with auxiliary models for testing</B>
+<P>
+<H3>Information</H3>
+<PRE></pre>
+This package contains components utility components for testing examples.
+<pre></PRE><P>
+<H3>Package Content</H3><p>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2 >
+<TR><TH >Name</TH><TH>Description</TH></TR>
+<TR><TD><IMG SRC="Modelica.Electrical.Machines.Examples.Utilities.VfControllerS.png" ALT="Modelica.Electrical.Machines.Examples.Utilities.VfController" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Electrical_Machines_Examples_Utilities.html#Modelica.Electrical.Machines.Examples.Utilities.VfController"
+>VfController</A>
+</TD><TD>Voltage-Frequency-Controller</TD></TR>
+<TR><TD><IMG SRC="Modelica.Electrical.Machines.Examples.Utilities.SwitchYDS.png" ALT="Modelica.Electrical.Machines.Examples.Utilities.SwitchYD" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Electrical_Machines_Examples_Utilities.html#Modelica.Electrical.Machines.Examples.Utilities.SwitchYD"
+>SwitchYD</A>
+</TD><TD>Y-D-switch</TD></TR>
+<TR><TD><IMG SRC="Modelica.Electrical.Machines.Examples.Utilities.TerminalBoxS.png" ALT="Modelica.Electrical.Machines.Examples.Utilities.TerminalBox" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Electrical_Machines_Examples_Utilities.html#Modelica.Electrical.Machines.Examples.Utilities.TerminalBox"
+>TerminalBox</A>
+</TD><TD>terminal box Y/D-connection</TD></TR>
+<TR><TD><IMG SRC="Modelica.Electrical.Machines.Examples.Utilities.TransformerDataS.png" ALT="Modelica.Electrical.Machines.Examples.Utilities.TransformerData" WIDTH=20  HEIGHT=20 ALIGN = TOP >&nbsp;<A HREF="Modelica_Electrical_Machines_Examples_Utilities.html#Modelica.Electrical.Machines.Examples.Utilities.TransformerData"
+>TransformerData</A>
+</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE VfController<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica.Electrical.Machines.Examples.Utilities.VfControllerI.png" ALT="Modelica.Electrical.Machines.Examples.Utilities.VfController" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica.Electrical.Machines.Examples.Utilities.VfController"></A><A HREF="Modelica_Electrical_Machines_Examples_Utilities.html#Modelica.Electrical.Machines.Examples.Utilities"
+>Modelica.Electrical.Machines.Examples.Utilities</A>.VfController</H2>
+<B>Voltage-Frequency-Controller</B><p>
+<H3>Information</H3>
+<PRE></pre>
+Simple Voltage-Frequency-Controller.<br>
+Amplitude of voltage is linear dependent (VNominal/fNominal) on frequency (input signal "u"), but limited by VNominal (nominal RMS voltage per phase).<br>
+m sine-waves with amplitudes as described above are provided as output signal "y".<br>
+The sine-waves are intended to feed a m-phase SignalVoltage.<br>
+Phase shifts between sine-waves may be choosen by the user; default values are <i>(k-1)/m*pi for k in 1:m</i>.
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD>nout</TD><TD>Number of outputs</TD></TR>
+<TR><TD>m</TD><TD>number of phases</TD></TR>
+<TR><TD>VNominal</TD><TD>nominal RMS voltage per phase [V]</TD></TR>
+<TR><TD>fNominal</TD><TD>nominal frequency [Hz]</TD></TR>
+<TR><TD>BasePhase</TD><TD>common phase shift [rad]</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE SwitchYD<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica.Electrical.Machines.Examples.Utilities.SwitchYDI.png" ALT="Modelica.Electrical.Machines.Examples.Utilities.SwitchYD" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica.Electrical.Machines.Examples.Utilities.SwitchYD"></A><A HREF="Modelica_Electrical_Machines_Examples_Utilities.html#Modelica.Electrical.Machines.Examples.Utilities"
+>Modelica.Electrical.Machines.Examples.Utilities</A>.SwitchYD</H2>
+<B>Y-D-switch</B><p>
+<H3>Information</H3>
+<PRE></pre>
+Simple Star-Delta-switch.<br>
+If <i>control</i> is false, plug_PS and plug_NS are star connected and plug_PS connected to plug_P.<br>
+If <i>control</i> is true, plug_PS and plug_NS are delta connected and they are connected to plug_P.
+<pre></PRE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD>plug_P</TD><TD>&nbsp;</TD></TR>
+<TR><TD>pug_PS</TD><TD>&nbsp;</TD></TR>
+<TR><TD>plug_NS</TD><TD>&nbsp;</TD></TR>
+<TR><TD>control[m]</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE TerminalBox<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica.Electrical.Machines.Examples.Utilities.TerminalBoxI.png" ALT="Modelica.Electrical.Machines.Examples.Utilities.TerminalBox" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica.Electrical.Machines.Examples.Utilities.TerminalBox"></A><A HREF="Modelica_Electrical_Machines_Examples_Utilities.html#Modelica.Electrical.Machines.Examples.Utilities"
+>Modelica.Electrical.Machines.Examples.Utilities</A>.TerminalBox</H2>
+<B>terminal box Y/D-connection</B><p>
+<H3>Information</H3>
+<PRE></pre>
+TerminalBox: at the bottom connected to both machine plugs, connect at the top to the grid as usual,<br>
+choosing Y-connection (StarDelta=Y) or D-connection (StarDelta=D).
+<pre></PRE>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD>StarDelta</TD><TD>Choose Y=star/D=delta</TD></TR>
+</TABLE>
+<H3>Connectors</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD>positiveMachinePlug</TD><TD>&nbsp;</TD></TR>
+<TR><TD>negativeMachinePlug</TD><TD>&nbsp;</TD></TR>
+<TR><TD>plugToGrid</TD><TD>&nbsp;</TD></TR>
+<TR><TD>starpoint</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<HR>
+<!--[if supportFields]><span style='mso-element:field-begin'></span>
+<span style='mso-spacerun:yes'></span>XE TransformerData<![endif]-->
+<!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->
+<H2><IMG SRC="Modelica.Electrical.Machines.Examples.Utilities.TransformerDataI.png" ALT="Modelica.Electrical.Machines.Examples.Utilities.TransformerData" ALIGN=RIGHT BORDER=1 WIDTH=80  HEIGHT=80 >
+<A NAME="Modelica.Electrical.Machines.Examples.Utilities.TransformerData"></A><A HREF="Modelica_Electrical_Machines_Examples_Utilities.html#Modelica.Electrical.Machines.Examples.Utilities"
+>Modelica.Electrical.Machines.Examples.Utilities</A>.TransformerData</H2>
+<H3>Parameters</H3><P>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=2>
+<TR><TH>Name</TH><TH>Description</TH></TR>
+<TR><TD>f</TD><TD>Nominal frequency [Hz]</TD></TR>
+<TR><TD>V1</TD><TD>Primary nominal line-to-line voltage (RMS) [V]</TD></TR>
+<TR><TD>C1</TD><TD>Choose primary connection</TD></TR>
+<TR><TD>V2</TD><TD>Secondary open circuit line-to-line voltage (RMS) @ primary nominal voltage [V]</TD></TR>
+<TR><TD>C2</TD><TD>Choose secondary connection</TD></TR>
+<TR><TD>SNominal</TD><TD>Nominal apparent power [VA]</TD></TR>
+<TR><TD>v_sc</TD><TD>Impedance voltage drop pu</TD></TR>
+<TR><TD>P_sc</TD><TD>Short-circuit (copper) losses [W]</TD></TR>
+<TR bgcolor="#c0c0c0"><TD colspan=2><B>Result</B></TD></TR>
+<TR><TD>n</TD><TD>Primary voltage (line-to-line) / Secondary voltage (line-to-line)</TD></TR>
+<TR><TD>R1</TD><TD>Warm primary resistance per phase [Ohm]</TD></TR>
+<TR><TD>L1sigma</TD><TD>Primary stray inductance per phase [H]</TD></TR>
+<TR><TD>R2</TD><TD>Warm secondary resistance per phase [Ohm]</TD></TR>
+<TR><TD>L2sigma</TD><TD>Secondary stray inductance per phase [H]</TD></TR>
+</TABLE>
+<HR>
+<address>HTML-documentation generated by <a href="http://www.dynasim.se/">Dymola</a> Thu Feb 28 10:57:22 2008.
+</address></BODY>
+</HTML>

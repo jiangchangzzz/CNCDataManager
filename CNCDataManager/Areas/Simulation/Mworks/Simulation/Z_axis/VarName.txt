@@ -1,0 +1,15 @@
+time
+az
+vz
+z
+z_axis_mechnical_model.z_axis_screwsimple.flange_a.phi
+z_axis_mechnical_model.z_axis_screwsimple.flange_a.tau
+z_axis_mechnical_model.coupling.inertia.w
+z_axis_mechnical_model.coupling.inertia.a
+pmsm.PMSM.lssigma.i[1]
+pmsm.PMSM.lssigma.i[2]
+pmsm.PMSM.lssigma.i[3]
+z_axis_mechnical_model.coupling.inertia1.w
+z_axis_mechnical_model.coupling.inertia1.a
+pmsm.flange_a.phi
+pmsm.flange_a.tau

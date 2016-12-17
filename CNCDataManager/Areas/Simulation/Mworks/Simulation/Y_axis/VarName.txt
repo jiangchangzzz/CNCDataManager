@@ -1,0 +1,15 @@
+time
+a
+v
+X
+y_axis_mechnical_model.simpleprojectscrew.flange_a.phi
+y_axis_mechnical_model.simpleprojectscrew.flange_a.tau
+y_axis_mechnical_model.coupling.inertia.w
+y_axis_mechnical_model.coupling.inertia.a
+pmsm.PMSM.lssigma.i[1]
+pmsm.PMSM.lssigma.i[2]
+pmsm.PMSM.lssigma.i[3]
+pmsm.flange_a.phi
+y_axis_mechnical_model.coupling.inertia1.w
+y_axis_mechnical_model.coupling.inertia1.a
+pmsm.flange_a.tau

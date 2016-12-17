@@ -1,0 +1,1 @@
+C:\Users\peter\Desktop\c_compiler\Simulation\MWSolver.exe -s C:\Users\peter\Desktop\c_compiler\Simulation\Setting.txt -r C:\Users\peter\Desktop\c_compiler\Simulation\X_data.msf

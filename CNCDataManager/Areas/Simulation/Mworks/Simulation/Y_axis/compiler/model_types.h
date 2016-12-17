@@ -1,0 +1,13 @@
+#ifndef MWSOLVER_TYPES_DEFINE_H
+#define MWSOLVER_TYPES_DEFINE_H
+
+
+
+MoString u_0u_0MWu_0Bltu_0Realu_0Stru_0Cvtu_0u_0_real2stru_0opt(MWS_MDL_PARAM_PTR MoReal, MoBoolean, MoInteger);
+  
+
+
+DEFINE_LINEAR_AUX_FUNC_FORWARD(116, 0);
+DEFINE_LINEAR_AUX_FUNC_FORWARD(143, 0);
+
+#endif /*MWSOLVER_TYPES_DEFINE_H*/

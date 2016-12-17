@@ -1,0 +1,1599 @@
+<Z_axis.Z_axis_model>
+    <__component__ Name="servo">
+        <__variable__ Name="Udc" Prefixes="393" Start="311" Description="额定电压" />
+        <__variable__ Name="T_PWM" Prefixes="393" Start="0.0001" Description="PWM周期" />
+        <__variable__ Name="p" Prefixes="393" Start="1" Description="Number of pole pairs" />
+        <__variable__ Name="VCellNominal" Prefixes="393" Start="311" Unit="V" Description="Nominal cell voltage" />
+        <__variable__ Name="ICellMax" Prefixes="393" Start="800" Unit="A" Description="Maximum admissable cell current" />
+        <__variable__ Name="RsCell" Prefixes="393" Start="0.006" Unit="Ohm" Description="Internal cell resistor" />
+        <__variable__ Name="nsBatt" Prefixes="393" Start="1" Description="Number of series connected cells" />
+        <__variable__ Name="npBatt" Prefixes="393" Start="1" Description="Number of parallel connected cells" />
+        <__variable__ Name="IConverterMax" Prefixes="393" Start="400" Unit="A" Description="Maximum admissible converter DC supply current" />
+        <__variable__ Name="ks" Prefixes="393" Start="60" Description="位置环增益" />
+        <__variable__ Name="kv" Prefixes="393" Start="0.5" Description="速度环增益" />
+        <__variable__ Name="Tv" Prefixes="393" Start="0.015" Unit="s" Description="速度环积分常数" />
+        <__variable__ Name="kq" Prefixes="265" Description="q轴电流增益值" />
+        <__variable__ Name="Tq" Prefixes="265" Unit="s" Description="q轴电流积分常数" />
+        <__variable__ Name="kd" Prefixes="393" Start="2.7432" Description="d轴电流增益值" />
+        <__variable__ Name="Td" Prefixes="393" Start="0.004085" Unit="s" Description="d轴电流积分常数" />
+        <__variable__ Name="uMax1" Prefixes="393" Start="200" />
+        <__variable__ Name="uMax2" Prefixes="393" Start="200" />
+        <__variable__ Name="uMax3" Prefixes="393" Start="1000" />
+        <__component__ Name="currentsensor">
+            <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+            <__component__ Name="plug_p">
+                <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                <__component__ Name="pin" Array="true">
+                    <__component__ Name="pin[1]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[2]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[3]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                </__component__>
+            </__component__>
+            <__component__ Name="plug_n">
+                <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                <__component__ Name="pin" Array="true">
+                    <__component__ Name="pin[1]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[2]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[3]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                </__component__>
+            </__component__>
+            <__component__ Name="i" Array="true">
+                <__variable__ Name="i[1]" Prefixes="257" Unit="A" Description="current in the branch from p to n as output signal" />
+                <__variable__ Name="i[2]" Prefixes="257" Unit="A" Description="current in the branch from p to n as output signal" />
+                <__variable__ Name="i[3]" Prefixes="257" Unit="A" Description="current in the branch from p to n as output signal" />
+            </__component__>
+            <__component__ Name="currentSensor" Array="true">
+                <__component__ Name="currentSensor[1]">
+                    <__component__ Name="p">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="n">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="current in the branch from p to n as output signal" />
+                </__component__>
+                <__component__ Name="currentSensor[2]">
+                    <__component__ Name="p">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="n">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="current in the branch from p to n as output signal" />
+                </__component__>
+                <__component__ Name="currentSensor[3]">
+                    <__component__ Name="p">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="n">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="current in the branch from p to n as output signal" />
+                </__component__>
+            </__component__>
+        </__component__>
+        <__component__ Name="dcac">
+            <__component__ Name="pSupply">
+                <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+            </__component__>
+            <__component__ Name="nSupply">
+                <__variable__ Name="v" Prefixes="273" Unit="V" Description="Potential at the pin" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+            </__component__>
+            <__variable__ Name="IConverterMax" Prefixes="265" Unit="A" Description="Maximum admissible converter DC supply current" />
+            <__variable__ Name="vSupply" Prefixes="257" Unit="V" Description="Voltage of the supply port" />
+            <__variable__ Name="iSupply" Prefixes="257" Unit="A" Description="Current of the supply port" />
+            <__variable__ Name="powerSupply" Prefixes="257" Unit="W" Description="Power of the supply port" />
+            <__component__ Name="pLoad">
+                <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                <__component__ Name="pin" Array="true">
+                    <__component__ Name="pin[1]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[2]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[3]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                </__component__>
+            </__component__>
+            <__component__ Name="iLoad" Array="true">
+                <__variable__ Name="iLoad[1]" Prefixes="257" Unit="A" Description="Current of the load plug" />
+                <__variable__ Name="iLoad[2]" Prefixes="257" Unit="A" Description="Current of the load plug" />
+                <__variable__ Name="iLoad[3]" Prefixes="257" Unit="A" Description="Current of the load plug" />
+            </__component__>
+            <__component__ Name="vLoad" Array="true">
+                <__variable__ Name="vLoad[1]" Prefixes="257" Unit="V" Description="Voltage of the load plug" />
+                <__variable__ Name="vLoad[2]" Prefixes="257" Unit="V" Description="Voltage of the load plug" />
+                <__variable__ Name="vLoad[3]" Prefixes="257" Unit="V" Description="Voltage of the load plug" />
+            </__component__>
+            <__variable__ Name="powerLoad" Prefixes="257" Unit="W" Description="Power of the load plug" />
+            <__component__ Name="u" Array="true">
+                <__variable__ Name="u[1]" Prefixes="261" Description="Switch control signals" />
+                <__variable__ Name="u[2]" Prefixes="261" Description="Switch control signals" />
+                <__variable__ Name="u[3]" Prefixes="261" Description="Switch control signals" />
+                <__variable__ Name="u[4]" Prefixes="261" Description="Switch control signals" />
+                <__variable__ Name="u[5]" Prefixes="261" Description="Switch control signals" />
+                <__variable__ Name="u[6]" Prefixes="261" Description="Switch control signals" />
+            </__component__>
+            <__variable__ Name="vDC" Prefixes="257" Unit="V" Description="Voltage of the (supply) DC link" />
+            <__variable__ Name="RonSwitch" Prefixes="274" Unit="Ohm" Description="Closed switch resistance" />
+            <__variable__ Name="GoffSwitch" Prefixes="274" Unit="S" Description="Opened switch conductance" />
+            <__variable__ Name="RonDiode" Prefixes="274" Unit="Ohm" Description="Forward state-on differential resistance (closed diode resistance)" />
+            <__variable__ Name="GoffDiode" Prefixes="274" Unit="S" Description="Backward state-off conductance (opened diode conductance)" />
+            <__variable__ Name="VkneeDiode" Prefixes="274" Unit="V" Description="Forward threshold voltage" />
+            <__component__ Name="idealClosingSwitch1">
+                <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                <__component__ Name="p">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="n">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__variable__ Name="Ron" Prefixes="273" Unit="Ohm" Description="Closed switch resistance" />
+                <__variable__ Name="Goff" Prefixes="273" Unit="S" Description="Opened switch conductance" />
+                <__variable__ Name="control" Prefixes="261" Description="true =&gt; p--n connected, false =&gt; switch open" />
+                <__variable__ Name="s" Prefixes="258" Unit="1" Description="Auxiliary variable" />
+            </__component__>
+            <__component__ Name="idealClosingSwitch3">
+                <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                <__component__ Name="p">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="n">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__variable__ Name="Ron" Prefixes="273" Unit="Ohm" Description="Closed switch resistance" />
+                <__variable__ Name="Goff" Prefixes="273" Unit="S" Description="Opened switch conductance" />
+                <__variable__ Name="control" Prefixes="261" Description="true =&gt; p--n connected, false =&gt; switch open" />
+                <__variable__ Name="s" Prefixes="258" Unit="1" Description="Auxiliary variable" />
+            </__component__>
+            <__component__ Name="idealClosingSwitch5">
+                <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                <__component__ Name="p">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="n">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__variable__ Name="Ron" Prefixes="273" Unit="Ohm" Description="Closed switch resistance" />
+                <__variable__ Name="Goff" Prefixes="273" Unit="S" Description="Opened switch conductance" />
+                <__variable__ Name="control" Prefixes="261" Description="true =&gt; p--n connected, false =&gt; switch open" />
+                <__variable__ Name="s" Prefixes="258" Unit="1" Description="Auxiliary variable" />
+            </__component__>
+            <__component__ Name="idealClosingSwitch4">
+                <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                <__component__ Name="p">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="n">
+                    <__variable__ Name="v" Prefixes="273" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__variable__ Name="Ron" Prefixes="273" Unit="Ohm" Description="Closed switch resistance" />
+                <__variable__ Name="Goff" Prefixes="273" Unit="S" Description="Opened switch conductance" />
+                <__variable__ Name="control" Prefixes="261" Description="true =&gt; p--n connected, false =&gt; switch open" />
+                <__variable__ Name="s" Prefixes="258" Unit="1" Description="Auxiliary variable" />
+            </__component__>
+            <__component__ Name="idealClosingSwitch6">
+                <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                <__component__ Name="p">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="n">
+                    <__variable__ Name="v" Prefixes="273" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__variable__ Name="Ron" Prefixes="273" Unit="Ohm" Description="Closed switch resistance" />
+                <__variable__ Name="Goff" Prefixes="273" Unit="S" Description="Opened switch conductance" />
+                <__variable__ Name="control" Prefixes="261" Description="true =&gt; p--n connected, false =&gt; switch open" />
+                <__variable__ Name="s" Prefixes="258" Unit="1" Description="Auxiliary variable" />
+            </__component__>
+            <__component__ Name="idealClosingSwitch2">
+                <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                <__component__ Name="p">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="n">
+                    <__variable__ Name="v" Prefixes="273" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__variable__ Name="Ron" Prefixes="273" Unit="Ohm" Description="Closed switch resistance" />
+                <__variable__ Name="Goff" Prefixes="273" Unit="S" Description="Opened switch conductance" />
+                <__variable__ Name="control" Prefixes="261" Description="true =&gt; p--n connected, false =&gt; switch open" />
+                <__variable__ Name="s" Prefixes="258" Unit="1" Description="Auxiliary variable" />
+            </__component__>
+            <__component__ Name="idealDiode1">
+                <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                <__component__ Name="p">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="n">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__variable__ Name="Ron" Prefixes="273" Unit="Ohm" Description="Forward state-on differential resistance (closed diode resistance)" />
+                <__variable__ Name="Goff" Prefixes="273" Unit="S" Description="Backward state-off conductance (opened diode conductance)" />
+                <__variable__ Name="Vknee" Prefixes="273" Unit="V" Description="Forward threshold voltage" />
+                <__variable__ Name="off" Prefixes="261" Description="Switching state" />
+                <__variable__ Name="s" Prefixes="258" Unit="1" Description="Auxiliary variable: if on then current, if opened then voltage" />
+            </__component__>
+            <__component__ Name="idealDiode3">
+                <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                <__component__ Name="p">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="n">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__variable__ Name="Ron" Prefixes="273" Unit="Ohm" Description="Forward state-on differential resistance (closed diode resistance)" />
+                <__variable__ Name="Goff" Prefixes="273" Unit="S" Description="Backward state-off conductance (opened diode conductance)" />
+                <__variable__ Name="Vknee" Prefixes="273" Unit="V" Description="Forward threshold voltage" />
+                <__variable__ Name="off" Prefixes="261" Description="Switching state" />
+                <__variable__ Name="s" Prefixes="258" Unit="1" Description="Auxiliary variable: if on then current, if opened then voltage" />
+            </__component__>
+            <__component__ Name="idealDiode5">
+                <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                <__component__ Name="p">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="n">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__variable__ Name="Ron" Prefixes="273" Unit="Ohm" Description="Forward state-on differential resistance (closed diode resistance)" />
+                <__variable__ Name="Goff" Prefixes="273" Unit="S" Description="Backward state-off conductance (opened diode conductance)" />
+                <__variable__ Name="Vknee" Prefixes="273" Unit="V" Description="Forward threshold voltage" />
+                <__variable__ Name="off" Prefixes="261" Description="Switching state" />
+                <__variable__ Name="s" Prefixes="258" Unit="1" Description="Auxiliary variable: if on then current, if opened then voltage" />
+            </__component__>
+            <__component__ Name="idealDiode4">
+                <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                <__component__ Name="p">
+                    <__variable__ Name="v" Prefixes="273" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="n">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__variable__ Name="Ron" Prefixes="273" Unit="Ohm" Description="Forward state-on differential resistance (closed diode resistance)" />
+                <__variable__ Name="Goff" Prefixes="273" Unit="S" Description="Backward state-off conductance (opened diode conductance)" />
+                <__variable__ Name="Vknee" Prefixes="273" Unit="V" Description="Forward threshold voltage" />
+                <__variable__ Name="off" Prefixes="261" Description="Switching state" />
+                <__variable__ Name="s" Prefixes="258" Unit="1" Description="Auxiliary variable: if on then current, if opened then voltage" />
+            </__component__>
+            <__component__ Name="idealDiode6">
+                <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                <__component__ Name="p">
+                    <__variable__ Name="v" Prefixes="273" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="n">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__variable__ Name="Ron" Prefixes="273" Unit="Ohm" Description="Forward state-on differential resistance (closed diode resistance)" />
+                <__variable__ Name="Goff" Prefixes="273" Unit="S" Description="Backward state-off conductance (opened diode conductance)" />
+                <__variable__ Name="Vknee" Prefixes="273" Unit="V" Description="Forward threshold voltage" />
+                <__variable__ Name="off" Prefixes="261" Description="Switching state" />
+                <__variable__ Name="s" Prefixes="258" Unit="1" Description="Auxiliary variable: if on then current, if opened then voltage" />
+            </__component__>
+            <__component__ Name="idealDiode2">
+                <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                <__component__ Name="p">
+                    <__variable__ Name="v" Prefixes="273" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="n">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__variable__ Name="Ron" Prefixes="273" Unit="Ohm" Description="Forward state-on differential resistance (closed diode resistance)" />
+                <__variable__ Name="Goff" Prefixes="273" Unit="S" Description="Backward state-off conductance (opened diode conductance)" />
+                <__variable__ Name="Vknee" Prefixes="273" Unit="V" Description="Forward threshold voltage" />
+                <__variable__ Name="off" Prefixes="261" Description="Switching state" />
+                <__variable__ Name="s" Prefixes="258" Unit="1" Description="Auxiliary variable: if on then current, if opened then voltage" />
+            </__component__>
+            <__component__ Name="voltageSensor">
+                <__component__ Name="p">
+                    <__variable__ Name="v" Prefixes="258" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="274" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="n">
+                    <__variable__ Name="v" Prefixes="274" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="274" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__variable__ Name="v" Prefixes="258" Unit="V" Description="Voltage between pin p and n (= p.v - n.v) as output signal" />
+            </__component__>
+        </__component__>
+        <__component__ Name="clark">
+            <__variable__ Name="i_a" Prefixes="257" Unit="A" />
+            <__variable__ Name="i_b" Prefixes="257" Unit="A" />
+            <__variable__ Name="i_c" Prefixes="257" Unit="A" />
+            <__variable__ Name="i_alpha" Prefixes="257" />
+            <__variable__ Name="i_beta" Prefixes="257" />
+        </__component__>
+        <__component__ Name="park">
+            <__variable__ Name="theta" Prefixes="257" />
+            <__variable__ Name="i_alpha" Prefixes="257" />
+            <__variable__ Name="i_beta" Prefixes="257" />
+            <__variable__ Name="i_d" Prefixes="257" />
+            <__variable__ Name="i_q" Prefixes="257" />
+        </__component__>
+        <__component__ Name="feedback4">
+            <__variable__ Name="u1" Prefixes="257" />
+            <__variable__ Name="u2" Prefixes="257" />
+            <__variable__ Name="y" Prefixes="257" />
+        </__component__>
+        <__component__ Name="feedback3">
+            <__variable__ Name="u1" Prefixes="257" />
+            <__variable__ Name="u2" Prefixes="257" />
+            <__variable__ Name="y" Prefixes="257" />
+        </__component__>
+        <__component__ Name="IdPI">
+            <__variable__ Name="u" Prefixes="257" Description="Connector of Real input signal" />
+            <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+            <__variable__ Name="k" Prefixes="265" Description="Gain" />
+            <__variable__ Name="T" Prefixes="265" Unit="s" Description="Time Constant (T&gt;0 required)" />
+            <__variable__ Name="initType" Prefixes="273" Description="Type of initialization (SteadyState and InitialOutput are identical)" />
+            <__variable__ Name="x_start" Prefixes="393" Start="0" Description="Initial or guess value of state" />
+            <__variable__ Name="y_start" Prefixes="393" Start="0" Description="Initial value of output" />
+            <__variable__ Name="x" Prefixes="385" Start="servo.IdPI.x_start" Description="State of block" />
+        </__component__>
+        <__component__ Name="IqPI">
+            <__variable__ Name="u" Prefixes="257" Description="Connector of Real input signal" />
+            <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+            <__variable__ Name="k" Prefixes="265" Description="Gain" />
+            <__variable__ Name="T" Prefixes="265" Unit="s" Description="Time Constant (T&gt;0 required)" />
+            <__variable__ Name="initType" Prefixes="273" Description="Type of initialization (SteadyState and InitialOutput are identical)" />
+            <__variable__ Name="x_start" Prefixes="393" Start="0" Description="Initial or guess value of state" />
+            <__variable__ Name="y_start" Prefixes="393" Start="0" Description="Initial value of output" />
+            <__variable__ Name="x" Prefixes="385" Start="servo.IqPI.x_start" Description="State of block" />
+        </__component__>
+        <__component__ Name="rPark1">
+            <__variable__ Name="theta" Prefixes="257" />
+            <__variable__ Name="V_d" Prefixes="257" />
+            <__variable__ Name="V_q" Prefixes="257" />
+            <__variable__ Name="V_alpha" Prefixes="257" />
+            <__variable__ Name="V_beta" Prefixes="257" />
+        </__component__>
+        <__variable__ Name="phi_ref" Prefixes="257" />
+        <__component__ Name="VqLimiter">
+            <__variable__ Name="u" Prefixes="257" Description="Connector of Real input signal" />
+            <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+            <__variable__ Name="uMax" Prefixes="265" Description="Upper limits of input signals" />
+            <__variable__ Name="uMin" Prefixes="265" Description="Lower limits of input signals" />
+            <__variable__ Name="limitsAtInit" Prefixes="393" Start="true" Description="= false, if limits are ignored during initializiation (i.e., y=u)" />
+        </__component__>
+        <__component__ Name="VdLimiter">
+            <__variable__ Name="u" Prefixes="257" Description="Connector of Real input signal" />
+            <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+            <__variable__ Name="uMax" Prefixes="265" Description="Upper limits of input signals" />
+            <__variable__ Name="uMin" Prefixes="265" Description="Lower limits of input signals" />
+            <__variable__ Name="limitsAtInit" Prefixes="393" Start="true" Description="= false, if limits are ignored during initializiation (i.e., y=u)" />
+        </__component__>
+        <__component__ Name="gain">
+            <__variable__ Name="k" Prefixes="265" Description="Gain value multiplied with input signal" />
+            <__variable__ Name="u" Prefixes="257" Unit="rad" Description="Input signal connector" />
+            <__variable__ Name="y" Prefixes="257" Description="Output signal connector" />
+        </__component__>
+        <__component__ Name="der1">
+            <__variable__ Name="u" Prefixes="257" Unit="rad" Description="Connector of Real input signal" />
+            <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+        </__component__>
+        <__component__ Name="id">
+            <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+            <__variable__ Name="k" Prefixes="393" Start="0" Description="Constant output value" />
+        </__component__>
+        <__component__ Name="IqLimiter">
+            <__variable__ Name="u" Prefixes="257" Description="Connector of Real input signal" />
+            <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+            <__variable__ Name="uMax" Prefixes="265" Description="Upper limits of input signals" />
+            <__variable__ Name="uMin" Prefixes="265" Description="Lower limits of input signals" />
+            <__variable__ Name="limitsAtInit" Prefixes="393" Start="true" Description="= false, if limits are ignored during initializiation (i.e., y=u)" />
+        </__component__>
+        <__component__ Name="vPI">
+            <__variable__ Name="u" Prefixes="257" Description="Connector of Real input signal" />
+            <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+            <__variable__ Name="k" Prefixes="265" Description="Gain" />
+            <__variable__ Name="T" Prefixes="265" Unit="s" Description="Time Constant (T&gt;0 required)" />
+            <__variable__ Name="initType" Prefixes="273" Description="Type of initialization (SteadyState and InitialOutput are identical)" />
+            <__variable__ Name="x_start" Prefixes="393" Start="0" Description="Initial or guess value of state" />
+            <__variable__ Name="y_start" Prefixes="393" Start="0" Description="Initial value of output" />
+            <__variable__ Name="x" Prefixes="385" Start="servo.vPI.x_start" Description="State of block" />
+        </__component__>
+        <__component__ Name="feedback1">
+            <__variable__ Name="u1" Prefixes="257" />
+            <__variable__ Name="u2" Prefixes="257" Unit="rad" />
+            <__variable__ Name="y" Prefixes="257" />
+        </__component__>
+        <__component__ Name="svpwm1">
+            <__variable__ Name="Udc" Prefixes="265" Description="额定电压" />
+            <__variable__ Name="T_PWM" Prefixes="265" Description="PWM周期" />
+            <__component__ Name="abtu_xyz">
+                <__variable__ Name="U_alpha" Prefixes="257" />
+                <__variable__ Name="U_beta" Prefixes="257" />
+                <__variable__ Name="T" Prefixes="257" />
+                <__variable__ Name="Ux" Prefixes="257" />
+                <__variable__ Name="X" Prefixes="257" />
+                <__variable__ Name="Y" Prefixes="257" />
+                <__variable__ Name="Z" Prefixes="257" />
+                <__component__ Name="gain">
+                    <__variable__ Name="k" Prefixes="393" Start="1.73205080756888" Description="Gain value multiplied with input signal" />
+                    <__variable__ Name="u" Prefixes="257" Description="Input signal connector" />
+                    <__variable__ Name="y" Prefixes="257" Description="Output signal connector" />
+                </__component__>
+                <__component__ Name="gain1">
+                    <__variable__ Name="k" Prefixes="393" Start="0.577350269189626" Description="Gain value multiplied with input signal" />
+                    <__variable__ Name="u" Prefixes="257" Description="Input signal connector" />
+                    <__variable__ Name="y" Prefixes="257" Description="Output signal connector" />
+                </__component__>
+                <__component__ Name="add">
+                    <__variable__ Name="u1" Prefixes="257" Description="Connector of Real input signal 1" />
+                    <__variable__ Name="u2" Prefixes="257" Description="Connector of Real input signal 2" />
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                    <__variable__ Name="k1" Prefixes="393" Start="1" Description="Gain of upper input" />
+                    <__variable__ Name="k2" Prefixes="393" Start="1" Description="Gain of lower input" />
+                </__component__>
+                <__component__ Name="add1">
+                    <__variable__ Name="u1" Prefixes="257" Description="Connector of Real input signal 1" />
+                    <__variable__ Name="u2" Prefixes="257" Description="Connector of Real input signal 2" />
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                    <__variable__ Name="k1" Prefixes="393" Start="1" Description="Gain of upper input" />
+                    <__variable__ Name="k2" Prefixes="393" Start="(-1)" Description="Gain of lower input" />
+                </__component__>
+                <__component__ Name="product">
+                    <__variable__ Name="u1" Prefixes="257" Description="Connector of Real input signal 1" />
+                    <__variable__ Name="u2" Prefixes="257" Description="Connector of Real input signal 2" />
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                </__component__>
+                <__component__ Name="division">
+                    <__variable__ Name="u1" Prefixes="257" Description="Connector of Real input signal 1" />
+                    <__variable__ Name="u2" Prefixes="257" Description="Connector of Real input signal 2" />
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                </__component__>
+                <__component__ Name="product1">
+                    <__variable__ Name="u1" Prefixes="257" Description="Connector of Real input signal 1" />
+                    <__variable__ Name="u2" Prefixes="257" Description="Connector of Real input signal 2" />
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                </__component__>
+                <__component__ Name="division1">
+                    <__variable__ Name="u1" Prefixes="257" Description="Connector of Real input signal 1" />
+                    <__variable__ Name="u2" Prefixes="257" Description="Connector of Real input signal 2" />
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                </__component__>
+                <__component__ Name="product2">
+                    <__variable__ Name="u1" Prefixes="257" Description="Connector of Real input signal 1" />
+                    <__variable__ Name="u2" Prefixes="257" Description="Connector of Real input signal 2" />
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                </__component__>
+                <__component__ Name="division2">
+                    <__variable__ Name="u1" Prefixes="257" Description="Connector of Real input signal 1" />
+                    <__variable__ Name="u2" Prefixes="257" Description="Connector of Real input signal 2" />
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                </__component__>
+                <__component__ Name="gain2">
+                    <__variable__ Name="k" Prefixes="393" Start="1.5" Description="Gain value multiplied with input signal" />
+                    <__variable__ Name="u" Prefixes="257" Description="Input signal connector" />
+                    <__variable__ Name="y" Prefixes="257" Description="Output signal connector" />
+                </__component__>
+                <__component__ Name="gain3">
+                    <__variable__ Name="k" Prefixes="393" Start="1.5" Description="Gain value multiplied with input signal" />
+                    <__variable__ Name="u" Prefixes="257" Description="Input signal connector" />
+                    <__variable__ Name="y" Prefixes="257" Description="Output signal connector" />
+                </__component__>
+            </__component__>
+            <__component__ Name="nxyz_t1t2_1">
+                <__variable__ Name="N" Prefixes="261" />
+                <__variable__ Name="X" Prefixes="257" />
+                <__variable__ Name="Y" Prefixes="257" />
+                <__variable__ Name="Z" Prefixes="257" />
+                <__variable__ Name="T1" Prefixes="257" />
+                <__variable__ Name="T2" Prefixes="257" />
+                <__variable__ Name="T" Prefixes="257" />
+                <__variable__ Name="Temp1" Prefixes="258" />
+                <__variable__ Name="Temp2" Prefixes="258" />
+            </__component__>
+            <__component__ Name="t1t2_tabc">
+                <__variable__ Name="T1" Prefixes="257" />
+                <__variable__ Name="T" Prefixes="257" />
+                <__variable__ Name="T2" Prefixes="257" />
+                <__variable__ Name="Ta" Prefixes="257" />
+                <__variable__ Name="Tb" Prefixes="257" />
+                <__variable__ Name="Tc" Prefixes="257" />
+                <__component__ Name="gain">
+                    <__variable__ Name="k" Prefixes="393" Start="0.5" Description="Gain value multiplied with input signal" />
+                    <__variable__ Name="u" Prefixes="257" Description="Input signal connector" />
+                    <__variable__ Name="y" Prefixes="257" Description="Output signal connector" />
+                </__component__>
+                <__component__ Name="gain1">
+                    <__variable__ Name="k" Prefixes="393" Start="0.5" Description="Gain value multiplied with input signal" />
+                    <__variable__ Name="u" Prefixes="257" Description="Input signal connector" />
+                    <__variable__ Name="y" Prefixes="257" Description="Output signal connector" />
+                </__component__>
+                <__component__ Name="add3_1">
+                    <__variable__ Name="k1" Prefixes="393" Start="(-1)" Description="Gain of upper input" />
+                    <__variable__ Name="k2" Prefixes="393" Start="(-1)" Description="Gain of middle input" />
+                    <__variable__ Name="k3" Prefixes="393" Start="1" Description="Gain of lower input" />
+                    <__variable__ Name="u1" Prefixes="257" Description="Connector 1 of Real input signals" />
+                    <__variable__ Name="u2" Prefixes="257" Description="Connector 2 of Real input signals" />
+                    <__variable__ Name="u3" Prefixes="257" Description="Connector 3 of Real input signals" />
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signals" />
+                </__component__>
+                <__component__ Name="gain2">
+                    <__variable__ Name="k" Prefixes="393" Start="0.25" Description="Gain value multiplied with input signal" />
+                    <__variable__ Name="u" Prefixes="257" Description="Input signal connector" />
+                    <__variable__ Name="y" Prefixes="257" Description="Output signal connector" />
+                </__component__>
+                <__component__ Name="add">
+                    <__variable__ Name="u1" Prefixes="257" Description="Connector of Real input signal 1" />
+                    <__variable__ Name="u2" Prefixes="257" Description="Connector of Real input signal 2" />
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                    <__variable__ Name="k1" Prefixes="393" Start="1" Description="Gain of upper input" />
+                    <__variable__ Name="k2" Prefixes="393" Start="1" Description="Gain of lower input" />
+                </__component__>
+                <__component__ Name="add1">
+                    <__variable__ Name="u1" Prefixes="257" Description="Connector of Real input signal 1" />
+                    <__variable__ Name="u2" Prefixes="257" Description="Connector of Real input signal 2" />
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                    <__variable__ Name="k1" Prefixes="393" Start="1" Description="Gain of upper input" />
+                    <__variable__ Name="k2" Prefixes="393" Start="1" Description="Gain of lower input" />
+                </__component__>
+            </__component__>
+            <__component__ Name="tabc_tcm">
+                <__variable__ Name="N" Prefixes="261" />
+                <__variable__ Name="Ta" Prefixes="257" />
+                <__variable__ Name="Tb" Prefixes="257" />
+                <__variable__ Name="Tc" Prefixes="257" />
+                <__variable__ Name="Tcm1" Prefixes="257" />
+                <__variable__ Name="Tcm2" Prefixes="257" />
+                <__variable__ Name="Tcm3" Prefixes="257" />
+            </__component__>
+            <__component__ Name="pwm">
+                <__variable__ Name="T_PWM" Prefixes="393" Start="0.0001" Unit="s" Description="Time for one period" />
+                <__variable__ Name="Tcm1" Prefixes="257" />
+                <__variable__ Name="Tcm2" Prefixes="257" />
+                <__variable__ Name="Tcm3" Prefixes="257" />
+                <__component__ Name="On" Array="true">
+                    <__variable__ Name="On[1]" Prefixes="261" />
+                    <__variable__ Name="On[2]" Prefixes="261" />
+                    <__variable__ Name="On[3]" Prefixes="261" />
+                </__component__>
+                <__component__ Name="pulse">
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                    <__variable__ Name="amplitude" Prefixes="393" Start="2" Description="Amplitude of pulse" />
+                    <__variable__ Name="width" Prefixes="393" Start="50" Description="Width of pulse in % of periods" />
+                    <__variable__ Name="period" Prefixes="265" Unit="s" Description="Time for one period" />
+                    <__variable__ Name="offset" Prefixes="393" Start="(-1)" Description="Offset of output signals" />
+                    <__variable__ Name="startTime" Prefixes="393" Start="0" Unit="s" Description="Output = offset for time &lt; startTime" />
+                    <__variable__ Name="T0" Prefixes="390" Start="servo.svpwm1.pwm.pulse.startTime" Unit="s" Description="Start time of current period" />
+                    <__variable__ Name="T_width" Prefixes="258" Unit="s" />
+                </__component__>
+                <__component__ Name="integrator">
+                    <__variable__ Name="u" Prefixes="257" Description="Connector of Real input signal" />
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                    <__variable__ Name="k" Prefixes="393" Start="1" Description="Integrator gain" />
+                    <__variable__ Name="initType" Prefixes="273" Description="Type of initialization (InitialState and InitialOutput are identical)" />
+                    <__variable__ Name="y_start" Prefixes="393" Start="0" Description="Initial or guess value of output (= state)" />
+                </__component__>
+                <__component__ Name="sum1">
+                    <__variable__ Name="nin" Prefixes="273" Description="Number of inputs" />
+                    <__component__ Name="u" Array="true">
+                        <__variable__ Name="u[1]" Prefixes="257" Description="Connector of Real input signals" />
+                        <__variable__ Name="u[2]" Prefixes="257" Description="Connector of Real input signals" />
+                    </__component__>
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                    <__component__ Name="k" Array="true">
+                        <__variable__ Name="k[1]" Prefixes="393" Start="1.0" Description="Optional: sum coefficients" />
+                        <__variable__ Name="k[2]" Prefixes="393" Start="(-1.0)" Description="Optional: sum coefficients" />
+                    </__component__>
+                </__component__>
+                <__component__ Name="sum2">
+                    <__variable__ Name="nin" Prefixes="273" Description="Number of inputs" />
+                    <__component__ Name="u" Array="true">
+                        <__variable__ Name="u[1]" Prefixes="257" Description="Connector of Real input signals" />
+                        <__variable__ Name="u[2]" Prefixes="257" Description="Connector of Real input signals" />
+                    </__component__>
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                    <__component__ Name="k" Array="true">
+                        <__variable__ Name="k[1]" Prefixes="393" Start="1.0" Description="Optional: sum coefficients" />
+                        <__variable__ Name="k[2]" Prefixes="393" Start="(-1.0)" Description="Optional: sum coefficients" />
+                    </__component__>
+                </__component__>
+                <__component__ Name="sum3">
+                    <__variable__ Name="nin" Prefixes="273" Description="Number of inputs" />
+                    <__component__ Name="u" Array="true">
+                        <__variable__ Name="u[1]" Prefixes="257" Description="Connector of Real input signals" />
+                        <__variable__ Name="u[2]" Prefixes="257" Description="Connector of Real input signals" />
+                    </__component__>
+                    <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                    <__component__ Name="k" Array="true">
+                        <__variable__ Name="k[1]" Prefixes="393" Start="1.0" Description="Optional: sum coefficients" />
+                        <__variable__ Name="k[2]" Prefixes="393" Start="(-1.0)" Description="Optional: sum coefficients" />
+                    </__component__>
+                </__component__>
+                <__component__ Name="hysteresis1">
+                    <__variable__ Name="uLow" Prefixes="393" Start="1e-15" Description="if y=true and u&lt;=uLow, switch to y=false" />
+                    <__variable__ Name="uHigh" Prefixes="393" Start="1e-15" Description="if y=false and u&gt;=uHigh, switch to y=true" />
+                    <__variable__ Name="pre_y_start" Prefixes="393" Start="false" Description="Value of pre(y) at initial time" />
+                    <__variable__ Name="u" Prefixes="257" />
+                    <__variable__ Name="y" Prefixes="261" />
+                </__component__>
+                <__component__ Name="hysteresis2">
+                    <__variable__ Name="uLow" Prefixes="393" Start="1e-15" Description="if y=true and u&lt;=uLow, switch to y=false" />
+                    <__variable__ Name="uHigh" Prefixes="393" Start="1e-15" Description="if y=false and u&gt;=uHigh, switch to y=true" />
+                    <__variable__ Name="pre_y_start" Prefixes="393" Start="false" Description="Value of pre(y) at initial time" />
+                    <__variable__ Name="u" Prefixes="257" />
+                    <__variable__ Name="y" Prefixes="261" />
+                </__component__>
+                <__component__ Name="hysteresis3">
+                    <__variable__ Name="uLow" Prefixes="393" Start="1e-15" Description="if y=true and u&lt;=uLow, switch to y=false" />
+                    <__variable__ Name="uHigh" Prefixes="393" Start="1e-15" Description="if y=false and u&gt;=uHigh, switch to y=true" />
+                    <__variable__ Name="pre_y_start" Prefixes="393" Start="false" Description="Value of pre(y) at initial time" />
+                    <__variable__ Name="u" Prefixes="257" />
+                    <__variable__ Name="y" Prefixes="261" />
+                </__component__>
+            </__component__>
+            <__component__ Name="ab_n">
+                <__variable__ Name="U_alpha" Prefixes="257" />
+                <__variable__ Name="U_beta" Prefixes="257" />
+                <__variable__ Name="N" Prefixes="261" />
+                <__variable__ Name="va" Prefixes="258" />
+                <__variable__ Name="vb" Prefixes="258" />
+                <__variable__ Name="vc" Prefixes="258" />
+            </__component__>
+            <__component__ Name="Ux">
+                <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                <__variable__ Name="k" Prefixes="265" Description="Constant output value" />
+            </__component__>
+            <__component__ Name="T">
+                <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                <__variable__ Name="k" Prefixes="265" Description="Constant output value" />
+            </__component__>
+            <__variable__ Name="U_alpha" Prefixes="257" />
+            <__variable__ Name="U_beta" Prefixes="257" />
+            <__component__ Name="pulse" Array="true">
+                <__variable__ Name="pulse[1]" Prefixes="261" />
+                <__variable__ Name="pulse[2]" Prefixes="261" />
+                <__variable__ Name="pulse[3]" Prefixes="261" />
+                <__variable__ Name="pulse[4]" Prefixes="261" />
+                <__variable__ Name="pulse[5]" Prefixes="261" />
+                <__variable__ Name="pulse[6]" Prefixes="261" />
+            </__component__>
+            <__component__ Name="not1" Array="true">
+                <__component__ Name="not1[1]">
+                    <__variable__ Name="u" Prefixes="261" Description="Connector of Boolean input signal" />
+                    <__variable__ Name="y" Prefixes="261" Description="Connector of Boolean output signal" />
+                </__component__>
+                <__component__ Name="not1[2]">
+                    <__variable__ Name="u" Prefixes="261" Description="Connector of Boolean input signal" />
+                    <__variable__ Name="y" Prefixes="261" Description="Connector of Boolean output signal" />
+                </__component__>
+                <__component__ Name="not1[3]">
+                    <__variable__ Name="u" Prefixes="261" Description="Connector of Boolean input signal" />
+                    <__variable__ Name="y" Prefixes="261" Description="Connector of Boolean output signal" />
+                </__component__>
+            </__component__>
+        </__component__>
+        <__component__ Name="feedback2">
+            <__variable__ Name="u1" Prefixes="257" />
+            <__variable__ Name="u2" Prefixes="257" />
+            <__variable__ Name="y" Prefixes="257" />
+        </__component__>
+        <__component__ Name="negativeplug">
+            <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+            <__component__ Name="pin" Array="true">
+                <__component__ Name="pin[1]">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="pin[2]">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="pin[3]">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+            </__component__>
+        </__component__>
+        <__component__ Name="gain1">
+            <__variable__ Name="k" Prefixes="265" Description="Gain value multiplied with input signal" />
+            <__variable__ Name="u" Prefixes="257" Description="Input signal connector" />
+            <__variable__ Name="y" Prefixes="257" Description="Output signal connector" />
+        </__component__>
+        <__component__ Name="batteryideal">
+            <__component__ Name="p">
+                <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+            </__component__>
+            <__component__ Name="n">
+                <__variable__ Name="v" Prefixes="273" Unit="V" Description="Potential at the pin" />
+                <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+            </__component__>
+            <__variable__ Name="ns" Prefixes="393" Start="1" Description="Number of serial connected cells" />
+            <__variable__ Name="np" Prefixes="393" Start="1" Description="Number of parallel connected cells" />
+            <__variable__ Name="vCell" Prefixes="257" Unit="V" Description="Cell voltage" />
+            <__variable__ Name="iCell" Prefixes="257" Unit="A" Description="Cell current" />
+            <__variable__ Name="powerCell" Prefixes="257" Unit="W" Description="Cell power" />
+            <__variable__ Name="vPackage" Prefixes="257" Unit="V" Description="Package voltage" />
+            <__variable__ Name="iPackage" Prefixes="257" Unit="A" Description="Package current" />
+            <__variable__ Name="powerPackage" Prefixes="257" Unit="W" Description="Package power" />
+            <__variable__ Name="VCellNominal" Prefixes="265" Unit="V" Description="Nominal cell voltage" />
+            <__variable__ Name="ICellMax" Prefixes="265" Unit="A" Description="Maximum admissible cell current" />
+            <__variable__ Name="RsCell" Prefixes="265" Unit="Ohm" Description="Serial cell resistance of the equivalent circuit" />
+            <__variable__ Name="RsPackage" Prefixes="266" Unit="Ohm" Description="Serial inner resistance of cell package" />
+            <__component__ Name="rsPackage">
+                <__variable__ Name="v" Prefixes="258" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                <__variable__ Name="i" Prefixes="258" Unit="A" Description="Current flowing from pin p to pin n" />
+                <__component__ Name="p">
+                    <__variable__ Name="v" Prefixes="258" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="258" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="n">
+                    <__variable__ Name="v" Prefixes="258" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="258" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__variable__ Name="R" Prefixes="266" Unit="Ohm" Description="Resistance" />
+            </__component__>
+            <__component__ Name="VoltageSource">
+                <__variable__ Name="v" Prefixes="258" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                <__variable__ Name="i" Prefixes="258" Unit="A" Description="Current flowing from pin p to pin n" />
+                <__component__ Name="p">
+                    <__variable__ Name="v" Prefixes="258" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="258" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="n">
+                    <__variable__ Name="v" Prefixes="274" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="258" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__variable__ Name="V" Prefixes="266" Unit="V" Description="Value of constant voltage" />
+            </__component__>
+        </__component__>
+        <__component__ Name="ground">
+            <__component__ Name="p">
+                <__variable__ Name="v" Prefixes="274" Unit="V" Description="Potential at the pin" />
+                <__variable__ Name="i" Prefixes="258" Unit="A" Description="Current flowing into the pin" />
+            </__component__>
+        </__component__>
+        <__component__ Name="anglesensor">
+            <__component__ Name="flange_a">
+                <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                <__variable__ Name="tau" Prefixes="273" Unit="N.m" Description="Cut torque in the flange" />
+            </__component__>
+            <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute angle of flange" />
+        </__component__>
+        <__component__ Name="flange_a">
+            <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+            <__variable__ Name="tau" Prefixes="273" Unit="N.m" Description="Cut torque in the flange" />
+        </__component__>
+    </__component__>
+    <__component__ Name="pmsm">
+        <__variable__ Name="p" Prefixes="393" Start="1" Description="Number of pole pairs" />
+        <__variable__ Name="V0" Prefixes="393" Start="110" Unit="V" Description="No load RMS voltage @ fNominal" />
+        <__variable__ Name="INominal" Prefixes="393" Start="6" Unit="A" Description="Nominal phase current" />
+        <__variable__ Name="fNominal" Prefixes="393" Start="50" Unit="Hz" Description="Nominal frequency" />
+        <__variable__ Name="Jr" Prefixes="393" Start="0.915" Unit="kg.m2" Description="Rotor&apos;s moment of inertia" />
+        <__variable__ Name="nNominal" Prefixes="393" Start="3000" Unit="rpm" Description="Nominal arotor rotation speed" />
+        <__variable__ Name="tauNominal" Prefixes="393" Start="5" Unit="N.m" Description="Nominal torque" />
+        <__variable__ Name="Tm" Prefixes="393" Start="0.00224" Unit="s" Description="mechanical time constant" />
+        <__variable__ Name="Ti" Prefixes="393" Start="0.004085" Unit="s" Description="Electrical time constant" />
+        <__variable__ Name="Rs" Prefixes="393" Start="0.3567" Unit="Ohm" Description="Warm stator resistance" />
+        <__variable__ Name="Lssigma" Prefixes="393" Start="0.000106" Unit="H" Description="Stator stray inductance" />
+        <__variable__ Name="Lmd" Prefixes="393" Start="0.002316" Unit="H" Description="Main field inductance d-axis" />
+        <__variable__ Name="Lmq" Prefixes="393" Start="0.002316" Unit="H" Description="Main field inductance q-axis" />
+        <__component__ Name="PMSM">
+            <__variable__ Name="J_Rotor" Prefixes="265" Unit="kg.m2" Description="rotor&apos;s moment of inertia" />
+            <__variable__ Name="useSupport" Prefixes="273" Description="use support or fixed stator" />
+            <__variable__ Name="J_Stator" Prefixes="265" Unit="kg.m2" Description="stator&apos;s moment of inertia" />
+            <__variable__ Name="phi_mechanical" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="mechanical angle of rotor against stator" />
+            <__variable__ Name="w_mechanical" Prefixes="257" Unit="rad/s" DisplayUnit="rev/min" Description="mechanical angular velocity of rotor against stator" />
+            <__variable__ Name="rpm_mechanical" Prefixes="257" Unit="rev/min" Description="mechanical speed of rotor against stator [rpm]" />
+            <__variable__ Name="tau_electrical" Prefixes="257" Unit="N.m" Description="electromagnetic torque" />
+            <__variable__ Name="tau_shaft" Prefixes="257" Unit="N.m" Description="shaft torque" />
+            <__component__ Name="flange_a">
+                <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+            </__component__>
+            <__component__ Name="inertiaRotor">
+                <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of component (= flange_a.phi = flange_b.phi)" />
+                <__component__ Name="flange_a">
+                    <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                    <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+                </__component__>
+                <__component__ Name="flange_b">
+                    <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                    <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+                </__component__>
+                <__variable__ Name="J" Prefixes="265" Unit="kg.m2" Description="Moment of inertia" />
+                <__variable__ Name="initType" Prefixes="273" Description="Type of initialization (defines usage of start values below)" />
+                <__variable__ Name="phi_start" Prefixes="393" Start="0" Unit="rad" DisplayUnit="deg" Description="Initial or guess value of rotor rotation angle phi" />
+                <__variable__ Name="w_start" Prefixes="393" Start="0" Unit="rad/s" DisplayUnit="rev/min" Description="Initial or guess value of angular velocity w = der(phi)" />
+                <__variable__ Name="a_start" Prefixes="393" Start="0" Unit="rad/s2" Description="Initial value of angular acceleration a = der(w)" />
+                <__variable__ Name="stateSelection" Prefixes="273" Description="Priority to use phi and w as states" />
+                <__variable__ Name="w" Prefixes="257" Unit="rad/s" DisplayUnit="rev/min" Description="Absolute angular velocity of component" />
+                <__variable__ Name="a" Prefixes="257" Unit="rad/s2" Description="Absolute angular acceleration of component" />
+            </__component__>
+            <__component__ Name="fixed">
+                <__variable__ Name="phi0" Prefixes="393" Start="0" Unit="rad" DisplayUnit="deg" Description="Fixed offset angle of housing" />
+                <__component__ Name="flange_b">
+                    <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                    <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+                </__component__>
+            </__component__>
+            <__component__ Name="internalSupport">
+                <__variable__ Name="phi" Prefixes="258" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                <__variable__ Name="tau" Prefixes="274" Unit="N.m" Description="Cut torque in the flange" />
+            </__component__>
+            <__variable__ Name="pi" Prefixes="273" />
+            <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+            <__variable__ Name="p" Prefixes="265" Description="number of pole pairs (Integer)" />
+            <__component__ Name="vs" Array="true">
+                <__variable__ Name="vs[1]" Prefixes="257" Unit="V" Description="stator instantaneous voltages" />
+                <__variable__ Name="vs[2]" Prefixes="257" Unit="V" Description="stator instantaneous voltages" />
+                <__variable__ Name="vs[3]" Prefixes="257" Unit="V" Description="stator instantaneous voltages" />
+            </__component__>
+            <__component__ Name="is" Array="true">
+                <__variable__ Name="is[1]" Prefixes="257" Unit="A" Description="stator instantaneous currents" />
+                <__variable__ Name="is[2]" Prefixes="257" Unit="A" Description="stator instantaneous currents" />
+                <__variable__ Name="is[3]" Prefixes="257" Unit="A" Description="stator instantaneous currents" />
+            </__component__>
+            <__component__ Name="plug_sp">
+                <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                <__component__ Name="pin" Array="true">
+                    <__component__ Name="pin[1]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[2]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[3]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                </__component__>
+            </__component__>
+            <__component__ Name="plug_sn">
+                <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                <__component__ Name="pin" Array="true">
+                    <__component__ Name="pin[1]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[2]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[3]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                </__component__>
+            </__component__>
+            <__variable__ Name="fNominal" Prefixes="265" Unit="Hz" Description="nominal frequency" />
+            <__variable__ Name="Rs" Prefixes="265" Unit="Ohm" Description="warm stator resistance per phase" />
+            <__variable__ Name="Lssigma" Prefixes="265" Unit="H" Description="stator stray inductance per phase" />
+            <__variable__ Name="V0" Prefixes="265" Unit="V" Description="no-load RMS voltage per phase @ fNominal" />
+            <__variable__ Name="Lmd" Prefixes="265" Unit="H" Description="main field inductance in d-axis" />
+            <__variable__ Name="Lmq" Prefixes="265" Unit="H" Description="main field inductance in q-axis" />
+            <__variable__ Name="DamperCage" Prefixes="273" Description="damper cage is present?" />
+            <__variable__ Name="Lrsigma" Prefixes="265" Unit="H" Description="damper stray inductance in d-axis" />
+            <__variable__ Name="Lrsigmaq" Prefixes="265" Unit="H" Description="damper stray inductance in q-axis" />
+            <__variable__ Name="Rr" Prefixes="393" Start="0.04" Unit="Ohm" Description="warm damper resistance in d-axis" />
+            <__variable__ Name="Rrq" Prefixes="265" Unit="Ohm" Description="warm damper resistance in q-axis" />
+            <__variable__ Name="i_0_s" Prefixes="257" Unit="A" Description="stator zero-sequence current" />
+            <__component__ Name="idq_ss" Array="true">
+                <__variable__ Name="idq_ss[1]" Prefixes="257" Unit="A" Description="stator space phasor current / stator fixed frame" />
+                <__variable__ Name="idq_ss[2]" Prefixes="257" Unit="A" Description="stator space phasor current / stator fixed frame" />
+            </__component__>
+            <__component__ Name="idq_sr" Array="true">
+                <__variable__ Name="idq_sr[1]" Prefixes="385" Start="0" Unit="A" Description="stator space phasor current / rotor fixed frame" />
+                <__variable__ Name="idq_sr[2]" Prefixes="385" Start="0" Unit="A" Description="stator space phasor current / rotor fixed frame" />
+            </__component__>
+            <__component__ Name="idq_rs" Array="true">
+                <__variable__ Name="idq_rs[1]" Prefixes="257" Unit="A" Description="rotor space phasor current / stator fixed frame" />
+                <__variable__ Name="idq_rs[2]" Prefixes="257" Unit="A" Description="rotor space phasor current / stator fixed frame" />
+            </__component__>
+            <__component__ Name="idq_rr" Array="true">
+                <__variable__ Name="idq_rr[1]" Prefixes="257" Unit="A" Description="rotor space phasor current / rotor fixed frame" />
+                <__variable__ Name="idq_rr[2]" Prefixes="273" Unit="A" Description="rotor space phasor current / rotor fixed frame" />
+            </__component__>
+            <__variable__ Name="Ie" Prefixes="266" Unit="A" Description="equivalent excitation current" />
+            <__component__ Name="airGapR">
+                <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                <__variable__ Name="p" Prefixes="265" Description="number of pole pairs" />
+                <__variable__ Name="tau_electrical" Prefixes="257" Unit="N.m" />
+                <__variable__ Name="gamma" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Rotor displacement angle" />
+                <__component__ Name="i_ss" Array="true">
+                    <__variable__ Name="i_ss[1]" Prefixes="257" Unit="A" Description="Stator current space phasor with respect to the stator fixed frame" />
+                    <__variable__ Name="i_ss[2]" Prefixes="257" Unit="A" Description="Stator current space phasor with respect to the stator fixed frame" />
+                </__component__>
+                <__component__ Name="i_sr" Array="true">
+                    <__variable__ Name="i_sr[1]" Prefixes="257" Unit="A" Description="Stator current space phasor with respect to the rotor fixed frame" />
+                    <__variable__ Name="i_sr[2]" Prefixes="257" Unit="A" Description="Stator current space phasor with respect to the rotor fixed frame" />
+                </__component__>
+                <__component__ Name="i_rs" Array="true">
+                    <__variable__ Name="i_rs[1]" Prefixes="257" Unit="A" Description="Rotor current space phasor with respect to the stator fixed frame" />
+                    <__variable__ Name="i_rs[2]" Prefixes="257" Unit="A" Description="Rotor current space phasor with respect to the stator fixed frame" />
+                </__component__>
+                <__component__ Name="i_rr" Array="true">
+                    <__variable__ Name="i_rr[1]" Prefixes="257" Unit="A" Description="Rotor current space phasor with respect to the rotor fixed frame" />
+                    <__variable__ Name="i_rr[2]" Prefixes="273" Unit="A" Description="Rotor current space phasor with respect to the rotor fixed frame" />
+                </__component__>
+                <__component__ Name="psi_ms" Array="true">
+                    <__variable__ Name="psi_ms[1]" Prefixes="257" Unit="Wb" Description="Magnetizing flux phasor with respect to the stator fixed frame" />
+                    <__variable__ Name="psi_ms[2]" Prefixes="257" Unit="Wb" Description="Magnetizing flux phasor with respect to the stator fixed frame" />
+                </__component__>
+                <__component__ Name="psi_mr" Array="true">
+                    <__variable__ Name="psi_mr[1]" Prefixes="257" Unit="Wb" Description="Magnetizing flux phasor with respect to the rotor fixed frame" />
+                    <__variable__ Name="psi_mr[2]" Prefixes="257" Unit="Wb" Description="Magnetizing flux phasor with respect to the rotor fixed frame" />
+                </__component__>
+                <__component__ Name="RotationMatrix" Array="true">
+                    <__variable__ Name="RotationMatrix[1, 1]" Prefixes="257" Unit="1" Description="matrix of rotation from rotor to stator" />
+                    <__variable__ Name="RotationMatrix[1, 2]" Prefixes="257" Unit="1" Description="matrix of rotation from rotor to stator" />
+                    <__variable__ Name="RotationMatrix[2, 1]" Prefixes="257" Unit="1" Description="matrix of rotation from rotor to stator" />
+                    <__variable__ Name="RotationMatrix[2, 2]" Prefixes="257" Unit="1" Description="matrix of rotation from rotor to stator" />
+                </__component__>
+                <__component__ Name="flange_a">
+                    <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                    <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+                </__component__>
+                <__component__ Name="support">
+                    <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                    <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+                </__component__>
+                <__component__ Name="spacePhasor_s">
+                    <__component__ Name="v_" Array="true">
+                        <__variable__ Name="v_[1]" Prefixes="257" Unit="V" />
+                        <__variable__ Name="v_[2]" Prefixes="257" Unit="V" />
+                    </__component__>
+                    <__component__ Name="i_" Array="true">
+                        <__variable__ Name="i_[1]" Prefixes="257" Unit="A" />
+                        <__variable__ Name="i_[2]" Prefixes="257" Unit="A" />
+                    </__component__>
+                </__component__>
+                <__component__ Name="spacePhasor_r">
+                    <__component__ Name="v_" Array="true">
+                        <__variable__ Name="v_[1]" Prefixes="257" Unit="V" />
+                        <__variable__ Name="v_[2]" Prefixes="257" Unit="V" />
+                    </__component__>
+                    <__component__ Name="i_" Array="true">
+                        <__variable__ Name="i_[1]" Prefixes="257" Unit="A" />
+                        <__variable__ Name="i_[2]" Prefixes="273" Unit="A" />
+                    </__component__>
+                </__component__>
+                <__variable__ Name="Lmd" Prefixes="265" Unit="H" Description="main field inductance d-axis" />
+                <__variable__ Name="Lmq" Prefixes="265" Unit="H" Description="main field inductance q-axis" />
+                <__component__ Name="i_mr" Array="true">
+                    <__variable__ Name="i_mr[1]" Prefixes="257" Unit="A" Description="Magnetizing current space phasor with respect to the rotor fixed frame" />
+                    <__variable__ Name="i_mr[2]" Prefixes="257" Unit="A" Description="Magnetizing current space phasor with respect to the rotor fixed frame" />
+                </__component__>
+                <__component__ Name="L" Array="true">
+                    <__variable__ Name="L[1, 1]" Prefixes="266" Unit="H" Description="inductance matrix" />
+                    <__variable__ Name="L[1, 2]" Prefixes="266" Unit="H" Description="inductance matrix" />
+                    <__variable__ Name="L[2, 1]" Prefixes="266" Unit="H" Description="inductance matrix" />
+                    <__variable__ Name="L[2, 2]" Prefixes="266" Unit="H" Description="inductance matrix" />
+                </__component__>
+            </__component__>
+            <__component__ Name="permanentMagnet">
+                <__variable__ Name="Ie" Prefixes="265" Unit="A" Description="Equivalent excitation current" />
+                <__component__ Name="spacePhasor_r">
+                    <__component__ Name="v_" Array="true">
+                        <__variable__ Name="v_[1]" Prefixes="257" Unit="V" />
+                        <__variable__ Name="v_[2]" Prefixes="257" Unit="V" />
+                    </__component__>
+                    <__component__ Name="i_" Array="true">
+                        <__variable__ Name="i_[1]" Prefixes="257" Unit="A" />
+                        <__variable__ Name="i_[2]" Prefixes="273" Unit="A" />
+                    </__component__>
+                </__component__>
+            </__component__>
+            <__component__ Name="rs">
+                <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                <__component__ Name="v" Array="true">
+                    <__variable__ Name="v[1]" Prefixes="257" Unit="V" Description="Voltage drops between the two plugs" />
+                    <__variable__ Name="v[2]" Prefixes="257" Unit="V" Description="Voltage drops between the two plugs" />
+                    <__variable__ Name="v[3]" Prefixes="257" Unit="V" Description="Voltage drops between the two plugs" />
+                </__component__>
+                <__component__ Name="i" Array="true">
+                    <__variable__ Name="i[1]" Prefixes="257" Unit="A" Description="Currents flowing into positive plugs" />
+                    <__variable__ Name="i[2]" Prefixes="257" Unit="A" Description="Currents flowing into positive plugs" />
+                    <__variable__ Name="i[3]" Prefixes="257" Unit="A" Description="Currents flowing into positive plugs" />
+                </__component__>
+                <__component__ Name="plug_p">
+                    <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                    <__component__ Name="pin" Array="true">
+                        <__component__ Name="pin[1]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="pin[2]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="pin[3]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                    </__component__>
+                </__component__>
+                <__component__ Name="plug_n">
+                    <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                    <__component__ Name="pin" Array="true">
+                        <__component__ Name="pin[1]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="pin[2]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="pin[3]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                    </__component__>
+                </__component__>
+                <__component__ Name="R" Array="true">
+                    <__variable__ Name="R[1]" Prefixes="265" Unit="Ohm" Description="Resistance" />
+                    <__variable__ Name="R[2]" Prefixes="265" Unit="Ohm" Description="Resistance" />
+                    <__variable__ Name="R[3]" Prefixes="265" Unit="Ohm" Description="Resistance" />
+                </__component__>
+                <__component__ Name="resistor" Array="true">
+                    <__component__ Name="resistor[1]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                        <__component__ Name="p">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="n">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__variable__ Name="R" Prefixes="265" Unit="Ohm" Description="Resistance" />
+                    </__component__>
+                    <__component__ Name="resistor[2]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                        <__component__ Name="p">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="n">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__variable__ Name="R" Prefixes="265" Unit="Ohm" Description="Resistance" />
+                    </__component__>
+                    <__component__ Name="resistor[3]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                        <__component__ Name="p">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="n">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__variable__ Name="R" Prefixes="265" Unit="Ohm" Description="Resistance" />
+                    </__component__>
+                </__component__>
+            </__component__>
+            <__component__ Name="lssigma">
+                <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                <__component__ Name="v" Array="true">
+                    <__variable__ Name="v[1]" Prefixes="257" Unit="V" Description="Voltage drops between the two plugs" />
+                    <__variable__ Name="v[2]" Prefixes="257" Unit="V" Description="Voltage drops between the two plugs" />
+                    <__variable__ Name="v[3]" Prefixes="257" Unit="V" Description="Voltage drops between the two plugs" />
+                </__component__>
+                <__component__ Name="i" Array="true">
+                    <__variable__ Name="i[1]" Prefixes="257" Unit="A" Description="Currents flowing into positive plugs" />
+                    <__variable__ Name="i[2]" Prefixes="257" Unit="A" Description="Currents flowing into positive plugs" />
+                    <__variable__ Name="i[3]" Prefixes="257" Unit="A" Description="Currents flowing into positive plugs" />
+                </__component__>
+                <__component__ Name="plug_p">
+                    <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                    <__component__ Name="pin" Array="true">
+                        <__component__ Name="pin[1]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="pin[2]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="pin[3]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                    </__component__>
+                </__component__>
+                <__component__ Name="plug_n">
+                    <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                    <__component__ Name="pin" Array="true">
+                        <__component__ Name="pin[1]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="pin[2]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="pin[3]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                    </__component__>
+                </__component__>
+                <__component__ Name="L" Array="true">
+                    <__variable__ Name="L[1]" Prefixes="265" Unit="H" Description="Inductance" />
+                    <__variable__ Name="L[2]" Prefixes="265" Unit="H" Description="Inductance" />
+                    <__variable__ Name="L[3]" Prefixes="265" Unit="H" Description="Inductance" />
+                </__component__>
+                <__component__ Name="inductor" Array="true">
+                    <__component__ Name="inductor[1]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                        <__component__ Name="p">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="n">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__variable__ Name="L" Prefixes="265" Unit="H" Description="Inductance" />
+                    </__component__>
+                    <__component__ Name="inductor[2]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                        <__component__ Name="p">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="n">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__variable__ Name="L" Prefixes="265" Unit="H" Description="Inductance" />
+                    </__component__>
+                    <__component__ Name="inductor[3]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Voltage drop between the two pins (= p.v - n.v)" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing from pin p to pin n" />
+                        <__component__ Name="p">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="n">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__variable__ Name="L" Prefixes="265" Unit="H" Description="Inductance" />
+                    </__component__>
+                </__component__>
+            </__component__>
+            <__component__ Name="spacePhasorS">
+                <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                <__variable__ Name="pi" Prefixes="273" />
+                <__component__ Name="v" Array="true">
+                    <__variable__ Name="v[1]" Prefixes="257" Unit="V" Description="instantaneous phase voltages" />
+                    <__variable__ Name="v[2]" Prefixes="257" Unit="V" Description="instantaneous phase voltages" />
+                    <__variable__ Name="v[3]" Prefixes="257" Unit="V" Description="instantaneous phase voltages" />
+                </__component__>
+                <__component__ Name="i" Array="true">
+                    <__variable__ Name="i[1]" Prefixes="257" Unit="A" Description="instantaneous phase currents" />
+                    <__variable__ Name="i[2]" Prefixes="257" Unit="A" Description="instantaneous phase currents" />
+                    <__variable__ Name="i[3]" Prefixes="257" Unit="A" Description="instantaneous phase currents" />
+                </__component__>
+                <__component__ Name="TransformationMatrix" Array="true">
+                    <__variable__ Name="TransformationMatrix[1, 1]" Prefixes="274" Unit="1" />
+                    <__variable__ Name="TransformationMatrix[1, 2]" Prefixes="274" Unit="1" />
+                    <__variable__ Name="TransformationMatrix[1, 3]" Prefixes="274" Unit="1" />
+                    <__variable__ Name="TransformationMatrix[2, 1]" Prefixes="274" Unit="1" />
+                    <__variable__ Name="TransformationMatrix[2, 2]" Prefixes="274" Unit="1" />
+                    <__variable__ Name="TransformationMatrix[2, 3]" Prefixes="274" Unit="1" />
+                </__component__>
+                <__component__ Name="InverseTransformation" Array="true">
+                    <__variable__ Name="InverseTransformation[1, 1]" Prefixes="274" />
+                    <__variable__ Name="InverseTransformation[1, 2]" Prefixes="274" />
+                    <__variable__ Name="InverseTransformation[2, 1]" Prefixes="274" />
+                    <__variable__ Name="InverseTransformation[2, 2]" Prefixes="274" />
+                    <__variable__ Name="InverseTransformation[3, 1]" Prefixes="274" />
+                    <__variable__ Name="InverseTransformation[3, 2]" Prefixes="274" />
+                </__component__>
+                <__component__ Name="plug_p">
+                    <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                    <__component__ Name="pin" Array="true">
+                        <__component__ Name="pin[1]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="pin[2]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="pin[3]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                    </__component__>
+                </__component__>
+                <__component__ Name="plug_n">
+                    <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                    <__component__ Name="pin" Array="true">
+                        <__component__ Name="pin[1]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="pin[2]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="pin[3]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                    </__component__>
+                </__component__>
+                <__component__ Name="zero">
+                    <__variable__ Name="v" Prefixes="273" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="ground">
+                    <__variable__ Name="v" Prefixes="273" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="gnd">
+                    <__component__ Name="p">
+                        <__variable__ Name="v" Prefixes="273" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                </__component__>
+                <__component__ Name="spacePhasor">
+                    <__component__ Name="v_" Array="true">
+                        <__variable__ Name="v_[1]" Prefixes="257" Unit="V" />
+                        <__variable__ Name="v_[2]" Prefixes="257" Unit="V" />
+                    </__component__>
+                    <__component__ Name="i_" Array="true">
+                        <__variable__ Name="i_[1]" Prefixes="257" Unit="A" />
+                        <__variable__ Name="i_[2]" Prefixes="257" Unit="A" />
+                    </__component__>
+                </__component__>
+            </__component__>
+        </__component__>
+        <__component__ Name="terminalBox">
+            <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+            <__variable__ Name="StarDelta" Prefixes="273" Description="Choose Y=star/D=delta" />
+            <__component__ Name="positiveMachinePlug">
+                <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                <__component__ Name="pin" Array="true">
+                    <__component__ Name="pin[1]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[2]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[3]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                </__component__>
+            </__component__>
+            <__component__ Name="negativeMachinePlug">
+                <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                <__component__ Name="pin" Array="true">
+                    <__component__ Name="pin[1]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[2]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[3]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                </__component__>
+            </__component__>
+            <__component__ Name="star">
+                <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                <__component__ Name="plug_p">
+                    <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                    <__component__ Name="pin" Array="true">
+                        <__component__ Name="pin[1]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="pin[2]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                        <__component__ Name="pin[3]">
+                            <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                            <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                        </__component__>
+                    </__component__>
+                </__component__>
+                <__component__ Name="pin_n">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="273" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+            </__component__>
+            <__component__ Name="plugToGrid">
+                <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+                <__component__ Name="pin" Array="true">
+                    <__component__ Name="pin[1]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[2]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                    <__component__ Name="pin[3]">
+                        <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                        <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                    </__component__>
+                </__component__>
+            </__component__>
+            <__component__ Name="starpoint">
+                <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                <__variable__ Name="i" Prefixes="273" Unit="A" Description="Current flowing into the pin" />
+            </__component__>
+        </__component__>
+        <__component__ Name="flange_a">
+            <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+            <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+        </__component__>
+        <__component__ Name="positiveplug">
+            <__variable__ Name="m" Prefixes="273" Description="number of phases" />
+            <__component__ Name="pin" Array="true">
+                <__component__ Name="pin[1]">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="pin[2]">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+                <__component__ Name="pin[3]">
+                    <__variable__ Name="v" Prefixes="257" Unit="V" Description="Potential at the pin" />
+                    <__variable__ Name="i" Prefixes="257" Unit="A" Description="Current flowing into the pin" />
+                </__component__>
+            </__component__>
+        </__component__>
+    </__component__>
+    <__component__ Name="z_axis_mechnical_model">
+        <__component__ Name="flange_a">
+            <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+            <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+        </__component__>
+        <__component__ Name="coupling">
+            <__component__ Name="spring">
+                <__variable__ Name="phi_rel" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Relative rotation angle (= flange_b.phi - flange_a.phi)" />
+                <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Torque between flanges (= flange_b.tau)" />
+                <__component__ Name="flange_a">
+                    <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                    <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+                </__component__>
+                <__component__ Name="flange_b">
+                    <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                    <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+                </__component__>
+                <__variable__ Name="c" Prefixes="393" Start="96389.8" Unit="N.m/rad" Description="Spring constant" />
+                <__variable__ Name="phi_rel0" Prefixes="393" Start="0" Unit="rad" DisplayUnit="deg" Description="Unstretched spring angle" />
+            </__component__>
+            <__component__ Name="inertia">
+                <__variable__ Name="phi" Prefixes="385" Start="z_axis_mechnical_model.coupling.inertia.phi_start" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of component (= flange_a.phi = flange_b.phi)" />
+                <__component__ Name="flange_a">
+                    <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                    <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+                </__component__>
+                <__component__ Name="flange_b">
+                    <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                    <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+                </__component__>
+                <__variable__ Name="J" Prefixes="393" Start="4e-5" Unit="kg.m2" Description="Moment of inertia" />
+                <__variable__ Name="initType" Prefixes="273" Description="Type of initialization (defines usage of start values below)" />
+                <__variable__ Name="phi_start" Prefixes="393" Start="0" Unit="rad" DisplayUnit="deg" Description="Initial or guess value of rotor rotation angle phi" />
+                <__variable__ Name="w_start" Prefixes="393" Start="0" Unit="rad/s" DisplayUnit="rev/min" Description="Initial or guess value of angular velocity w = der(phi)" />
+                <__variable__ Name="a_start" Prefixes="393" Start="0" Unit="rad/s2" Description="Initial value of angular acceleration a = der(w)" />
+                <__variable__ Name="stateSelection" Prefixes="273" Description="Priority to use phi and w as states" />
+                <__variable__ Name="w" Prefixes="385" Start="z_axis_mechnical_model.coupling.inertia.w_start" Unit="rad/s" DisplayUnit="rev/min" Description="Absolute angular velocity of component" />
+                <__variable__ Name="a" Prefixes="257" Unit="rad/s2" Description="Absolute angular acceleration of component" />
+            </__component__>
+            <__component__ Name="inertia1">
+                <__variable__ Name="phi" Prefixes="385" Start="z_axis_mechnical_model.coupling.inertia1.phi_start" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of component (= flange_a.phi = flange_b.phi)" />
+                <__component__ Name="flange_a">
+                    <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                    <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+                </__component__>
+                <__component__ Name="flange_b">
+                    <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                    <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+                </__component__>
+                <__variable__ Name="J" Prefixes="393" Start="4e-5" Unit="kg.m2" Description="Moment of inertia" />
+                <__variable__ Name="initType" Prefixes="273" Description="Type of initialization (defines usage of start values below)" />
+                <__variable__ Name="phi_start" Prefixes="393" Start="0" Unit="rad" DisplayUnit="deg" Description="Initial or guess value of rotor rotation angle phi" />
+                <__variable__ Name="w_start" Prefixes="393" Start="0" Unit="rad/s" DisplayUnit="rev/min" Description="Initial or guess value of angular velocity w = der(phi)" />
+                <__variable__ Name="a_start" Prefixes="393" Start="0" Unit="rad/s2" Description="Initial value of angular acceleration a = der(w)" />
+                <__variable__ Name="stateSelection" Prefixes="273" Description="Priority to use phi and w as states" />
+                <__variable__ Name="w" Prefixes="385" Start="z_axis_mechnical_model.coupling.inertia1.w_start" Unit="rad/s" DisplayUnit="rev/min" Description="Absolute angular velocity of component" />
+                <__variable__ Name="a" Prefixes="257" Unit="rad/s2" Description="Absolute angular acceleration of component" />
+            </__component__>
+            <__component__ Name="flange_a">
+                <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+            </__component__>
+            <__component__ Name="flange_b">
+                <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+            </__component__>
+        </__component__>
+        <__component__ Name="z_axis_rollingguide">
+            <__variable__ Name="M" Prefixes="393" Start="100" Unit="kg" Description="工作台质量" />
+            <__variable__ Name="ugf" Prefixes="393" Start="0.01" Description="导轨副的摩擦系数,普通导轨0.05~0.1，直线滚动导轨0.01~0.02" />
+            <__variable__ Name="B" Prefixes="393" Start="56.6223" Unit="N/m/s" Description="粘滞摩擦因子" />
+            <__variable__ Name="Fy" Prefixes="257" Description="法向切削力" />
+            <__variable__ Name="v" Prefixes="257" Description="工作台的移动速度" />
+            <__variable__ Name="Fg" Prefixes="257" Description="导轨的摩擦力" />
+        </__component__>
+        <__component__ Name="fixedbearing">
+            <__variable__ Name="KB1" Prefixes="273" Unit="N/m" Description="轴承轴向刚度" />
+            <__variable__ Name="Tf1" Prefixes="273" Unit="Nm" Description="轴承启动力矩（摩擦力矩）" />
+        </__component__>
+        <__component__ Name="oppositefixedendbearing">
+            <__variable__ Name="KB2" Prefixes="273" Unit="N/m" Description="轴承轴向刚度" />
+            <__variable__ Name="Tf2" Prefixes="273" Unit="Nm" Description="轴承启动力矩（摩擦力矩）" />
+        </__component__>
+        <__component__ Name="z_axis_screwsimple">
+            <__component__ Name="flange_a">
+                <__variable__ Name="phi" Prefixes="257" Unit="rad" DisplayUnit="deg" Description="Absolute rotation angle of flange" />
+                <__variable__ Name="tau" Prefixes="257" Unit="N.m" Description="Cut torque in the flange" />
+            </__component__>
+            <__variable__ Name="phix" Prefixes="257" Unit="rad" Description="丝杠螺母处的角位移" />
+            <__variable__ Name="Tf1" Prefixes="273" Description="轴承的摩擦力矩" />
+            <__variable__ Name="Ts" Prefixes="257" Unit="N.m" Description="负载转矩" />
+            <__variable__ Name="ds" Prefixes="393" Start="0.04" Unit="m" Description="丝杠的直径" />
+            <__variable__ Name="As" Prefixes="265" Unit="m2" Description="丝杠的截面积" />
+            <__variable__ Name="E" Prefixes="273" Description="丝杠材料的弹性模量，对于钢材E=2.1e5MPa" />
+            <__variable__ Name="Lsg" Prefixes="393" Start="0.8" Unit="m" Description="两双推轴承之间的距离" />
+            <__variable__ Name="h" Prefixes="393" Start="0.012" Unit="m" Description="丝杠的导程" />
+            <__variable__ Name="L" Prefixes="393" Start="0.766" Unit="m" Description="丝杠总长" />
+            <__variable__ Name="midu" Prefixes="393" Start="7850" Unit="kg/m3" DisplayUnit="g/cm3" Description="丝杠的密度，材料为钢" />
+            <__variable__ Name="J0" Prefixes="265" Unit="kg.m2" Description="丝杠的转动惯量" />
+            <__variable__ Name="G" Prefixes="273" Description="剪切弹性模量，对钢G=8.2e10（N/m2）" />
+            <__variable__ Name="i" Prefixes="265" />
+            <__variable__ Name="Ls" Prefixes="393" Start="1.2" Unit="m" Description="丝杠的有效长度" />
+            <__variable__ Name="Bta1" Prefixes="393" Start="0.09" Unit="s-1" Description="丝杠与螺母结合面径向阻尼系数" />
+            <__variable__ Name="Ksn" Prefixes="265" Description="丝杠扭转刚度" />
+            <__variable__ Name="w1" Prefixes="258" Unit="rad/s" DisplayUnit="rev/min" />
+            <__variable__ Name="M" Prefixes="393" Start="100" Unit="kg" Description="工作台质量" />
+            <__variable__ Name="Jw" Prefixes="265" Unit="kg.m2" />
+            <__variable__ Name="Tf2" Prefixes="273" Description="轴承的摩擦力矩" />
+        </__component__>
+        <__component__ Name="simpleheadstock">
+            <__variable__ Name="Ts" Prefixes="257" Unit="N.m" Description="负载转矩" />
+            <__variable__ Name="Fg" Prefixes="257" Description="导轨的摩擦力" />
+            <__variable__ Name="Fz" Prefixes="257" Description="进给力" />
+            <__variable__ Name="phz" Prefixes="257" Unit="rad" Description="丝杠螺母处的角位移" />
+            <__variable__ Name="az" Prefixes="257" Description="主轴箱的加速度" />
+            <__variable__ Name="z" Prefixes="257" Description="主轴箱的位移" />
+            <__variable__ Name="vz" Prefixes="257" Description="主轴箱的速度" />
+            <__component__ Name="derivative">
+                <__variable__ Name="u" Prefixes="257" Description="Connector of Real input signal" />
+                <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                <__variable__ Name="k" Prefixes="393" Start="1" Description="Gains" />
+                <__variable__ Name="T" Prefixes="393" Start="0.01" Unit="s" Description="Time constants (T&gt;0 required; T=0 is ideal derivative block)" />
+                <__variable__ Name="initType" Prefixes="273" Description="Type of initialization" />
+                <__variable__ Name="x_start" Prefixes="393" Start="0" Description="Initial or guess value of state" />
+                <__variable__ Name="y_start" Prefixes="393" Start="0" Description="Initial value of output (= state)" />
+                <__variable__ Name="x" Prefixes="385" Start="z_axis_mechnical_model.simpleheadstock.derivative.x_start" Description="State of block" />
+                <__variable__ Name="zeroGain" Prefixes="266" />
+            </__component__>
+            <__component__ Name="derivative1">
+                <__variable__ Name="u" Prefixes="257" Description="Connector of Real input signal" />
+                <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+                <__variable__ Name="k" Prefixes="393" Start="1" Description="Gains" />
+                <__variable__ Name="T" Prefixes="393" Start="0.01" Unit="s" Description="Time constants (T&gt;0 required; T=0 is ideal derivative block)" />
+                <__variable__ Name="initType" Prefixes="273" Description="Type of initialization" />
+                <__variable__ Name="x_start" Prefixes="393" Start="0" Description="Initial or guess value of state" />
+                <__variable__ Name="y_start" Prefixes="393" Start="0" Description="Initial value of output (= state)" />
+                <__variable__ Name="x" Prefixes="385" Start="z_axis_mechnical_model.simpleheadstock.derivative1.x_start" Description="State of block" />
+                <__variable__ Name="zeroGain" Prefixes="266" />
+            </__component__>
+            <__variable__ Name="M" Prefixes="393" Start="0.01" Unit="kg" Description="主轴箱质量" />
+            <__variable__ Name="h" Prefixes="393" Start="0.01" Unit="m" Description="丝杠的导程" />
+            <__variable__ Name="i" Prefixes="265" />
+            <__variable__ Name="Cn0" Prefixes="393" Start="25988" Unit="N" Description="双螺母预紧方式额定动载荷" />
+            <__variable__ Name="Kn0" Prefixes="393" Start="1.15e9" Description="产品样本尺寸表中给的接触刚度" />
+            <__variable__ Name="Tx" Prefixes="257" Unit="N.m" Description="切削负载力矩" />
+            <__variable__ Name="Tgf" Prefixes="257" Unit="N.m" Description="导轨摩擦力矩" />
+            <__variable__ Name="Tbf" Prefixes="257" Unit="N.m" Description="丝杠预紧产生的的摩擦力矩" />
+            <__variable__ Name="n" Prefixes="273" Description="预紧滚珠丝杠的效率" />
+            <__variable__ Name="Fp" Prefixes="257" Unit="N" />
+            <__variable__ Name="Fy" Prefixes="257" Description="法向切削载荷" />
+        </__component__>
+        <__variable__ Name="Fz" Prefixes="257" Description="进给力" />
+        <__variable__ Name="Fy" Prefixes="257" Description="法向切削载荷" />
+        <__variable__ Name="az" Prefixes="257" Description="主轴箱的加速度" />
+        <__variable__ Name="vz" Prefixes="257" Description="主轴箱的速度" />
+        <__variable__ Name="z" Prefixes="257" Description="主轴箱的位移" />
+    </__component__>
+    <__variable__ Name="Fz" Prefixes="289" Description="进给力" />
+    <__variable__ Name="Fy" Prefixes="289" Description="法向切削载荷" />
+    <__variable__ Name="az" Prefixes="321" Description="主轴箱的加速度" />
+    <__variable__ Name="vz" Prefixes="321" Description="主轴箱的速度" />
+    <__variable__ Name="z" Prefixes="321" Description="主轴箱的位移" />
+    <__component__ Name="sine">
+        <__variable__ Name="y" Prefixes="257" Description="Connector of Real output signal" />
+        <__variable__ Name="amplitude" Prefixes="393" Start="1" Description="Amplitude of sine wave" />
+        <__variable__ Name="freqHz" Prefixes="393" Start="1" Unit="Hz" Description="Frequency of sine wave" />
+        <__variable__ Name="phase" Prefixes="393" Start="0" Unit="rad" DisplayUnit="deg" Description="Phase of sine wave" />
+        <__variable__ Name="offset" Prefixes="393" Start="0" Description="Offset of output signal" />
+        <__variable__ Name="startTime" Prefixes="393" Start="0" Unit="s" Description="Output = offset for time &lt; startTime" />
+        <__variable__ Name="pi" Prefixes="274" />
+    </__component__>
+</Z_axis.Z_axis_model>

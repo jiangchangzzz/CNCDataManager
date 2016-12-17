@@ -1,0 +1,24 @@
+﻿<div class="container">
+    <div ng-controller="homeCtrl">
+        <ul class="nav nav-tabs nav-justified sim-nav">
+            <li ng-show="navShow[0]" ng-class="{active:navActive==0}"><a ui-sref="Simulation({FeedSystemType:'XY'})">X/Y轴仿真</a></li>
+            <li ng-show="navShow[1]" ng-class="{active:navActive==1}"><a ui-sref="Simulation({FeedSystemType:'X'})">X轴仿真</a></li>
+            <li ng-show="navShow[2]" ng-class="{active:navActive==2}"><a ui-sref="Simulation({FeedSystemType:'Y'})">Y轴仿真</a></li>
+            <li ng-show="navShow[3]" ng-class="{active:navActive==3}"><a ui-sref="Simulation({FeedSystemType:'Z'})">Z轴仿真</a></li>
+            <li ng-show="navShow[4]" ng-class="{active:navActive==4}"><a ui-sref="Simulation({FeedSystemType:'S'})">主轴仿真</a></li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <div ui-view="list">
+                列表组件正在加载中...
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div ui-view="table">
+                表格组件正在加载中...
+            </div>
+        </div>
+    </div>
+</div>

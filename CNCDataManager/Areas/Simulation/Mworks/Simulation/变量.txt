@@ -1,0 +1,12 @@
+time 时间
+a 工作台加速度
+v 工作台速度
+X 工作台位移
+x_axis_mechnical_model.simpleprojectscrew.flange_a.phi 丝杠角位移
+x_axis_mechnical_model.simpleprojectscrew.flange_a.tau 丝杠转矩
+pmsm.PMSM.lssigma.i[1] 电机三相电流
+pmsm.PMSM.lssigma.i[2] 电机三相电流
+pmsm.PMSM.lssigma.i[3] 电机三相电流
+pmsm.flange_a.phi 电机角位移
+pmsm.flange_a.tau 电机转矩
+

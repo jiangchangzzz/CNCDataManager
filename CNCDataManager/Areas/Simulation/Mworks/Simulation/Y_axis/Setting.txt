@@ -1,0 +1,9 @@
+[Simulation Interval]
+start_time=0
+stop_time=1
+[Output Step]
+step_len=0.002
+step_num=500
+[Integration]
+dae_algo=Dassl
+tol=0.0001
