@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CNCDataManager.Areas.Simulation.Controllers.Internals;
+using CNCDataManager.Areas.Simulation.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,9 +16,13 @@ namespace CNCDataManager.Areas.Simulation.Controllers
             return View();
         }
 
-        public ActionResult StartSimulation()
+        public string StartSimulation(SimulationPara para)
         {
-            return View();
+            PathSetting path = new PathSetting("X");
+            ModelReplace modelReplace = new ModelReplace(path);
+            modelReplace.ReplaceInputByAxis("Constant");
+            string result = "ready";
+            return result;
         }
     }
 }

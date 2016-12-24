@@ -36,6 +36,8 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/Home/Index" class="home-index-nav-link">主页</a></li>
                     <li><a href="/CNCData/Index" class="home-index-nav-link">查看数据</a></li>
+                    <li>@Html.RouteLink("进入选型", "Selection_default", new { controller = "Selection", action = "Index" }, new { @class = "home-index-nav-link" })</li>
+                    <li>@Html.RouteLink("开始仿真", "Simulation_default", new { controller = "Simulation", action = "Index" }, new { @class = "home-index-nav-link" })</li>
                     <li><a href="/Home/About" class="home-index-nav-link">关于</a></li>
                     <li><a href="/Home/Contact" class="home-index-nav-link">联系我们</a></li>
                 </ul>

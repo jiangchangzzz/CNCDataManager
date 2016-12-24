@@ -1,6 +1,97 @@
-﻿simulationCtrl.controller("paraSettingCtrl", function ($scope, $state, $stateParams,$http) {
+﻿simulationCtrl.controller("paraSettingCtrl", function ($scope, $state, $stateParams,$http,$location,$anchorScroll) {
+	$scope.gotoAnchor=function(id){
+		if($location.hash()!==id){
+			$location.hash(id);
+		}
+	};
+	//仿真设置算法选项
+	$scope.algOptions=["Dass1","Dass2"];
+	$scope.signalOptions=[{id:"Sine",name:"正弦信号"},
+		{id:"Step",name:"阶跃信号"},
+		{id:"Constant",name:"恒定值信号"}];
+
+	//准备仿真轴的类型
+	$scope.axis=$stateParams.FeedSystemType;
+
+	//伺服电机模型参数
+	$scope.motorPara={
+		rotorMomentInertia:0.915,   
+		polePairs:1,
+		statorResistance:0.3567,
+		statorStrayInductance:0.000106,
+		mainFieldInductanceDaxis:0.002316,
+		mainFieldInductanceQaxis:0.002316,
+		opposingElectromotiveForce:110,
+	};
+
+	//伺服驱动模型参数
+	$scope.driverPara={
+		nominalVoltage:311,
+		PWMCircle:0.0001,
+		KS:60,
+		KV:0.5,
+		polePairs:1,
+		cellVoltage:311,
+		KD:2.7432,
+		TD:0.004085,
+		TV:0.015,
+	}
+
+	//机械传动部分模型参数
+	$scope.ballscrewPara={  
+		diameter:0.04,
+		modulusofElasticty:2.1e11,
+		shaftDistance:0.8,
+		pitch:0.012,
+		length:0.766,
+		density:7850,
+		shearModulusofElasticty:6.2e10,
+		campingCoefficient:0.09,
+	};
+	$scope.guidePara={
+		frictionFactor:0.01,
+		viscosityFriction:56.6223,
+	};
+	$scope.bearingsPara={
+		axisalStiffness:7.6e8,
+		startingMoment:0.15,
+	};
+	$scope.couplingPara={
+		stiffness:96389.8,
+		momentInertia:4e-5,
+	};
+	$scope.worktablePara={
+		mass:100,
+		tighteningEfficiency:0.952,
+		contactStiffness:1.15e9,
+		dynamicLoadRating:25988,
+	};
+
+	//仿真设置参数
+	$scope.setting={
+		signal:$scope.signalOptions[0].id,
+		startTime:0,
+		endTime:1,
+		stepSize:0.002,
+		stepNum:500,
+		alg:$scope.algOptions[0],
+		precision:0.001,
+	}
+
+	//点击开始仿真按钮，将数据ajax发送到服务端处理
 	$scope.startSimulation=function(){
-		$http.post("/Simulation/Simulation/StartSimulation")
+		var simulationPara={
+			axis:$scope.axis,
+			motor:$scope.motorPara,
+			driver:$scope.driverPara,
+			ballscrew:$scope.ballscrewPara,
+			guide:$scope.guidePara,
+			bearings:$scope.bearingsPara,
+			coupling:$scope.couplingPara,
+			worktable:$scope.worktablePara,
+			setting:$scope.setting,
+		};
+		$http.post("/Simulation/Simulation/StartSimulation",simulationPara)
 			.then(function(response){
 				console.log(response.data);
 			},function(response){

@@ -52,6 +52,10 @@
       <HintPath>..\packages\DocX.1.0.0.22\lib\net40\DocX.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -200,10 +204,12 @@
     <Compile Include="Areas\Help\HelpAreaRegistration.cs" />
     <Compile Include="Areas\Selection\Controllers\SelectionController.cs" />
     <Compile Include="Areas\Selection\SelectionAreaRegistration.cs" />
+    <Compile Include="Areas\Simulation\Controllers\Internals\ErrorLog.cs" />
     <Compile Include="Areas\Simulation\Controllers\Internals\ModelCompile.cs" />
     <Compile Include="Areas\Simulation\Controllers\Internals\ModelReplace.cs" />
     <Compile Include="Areas\Simulation\Controllers\Internals\PathSetting.cs" />
     <Compile Include="Areas\Simulation\Controllers\SimulationController.cs" />
+    <Compile Include="Areas\Simulation\Models\SimulationPara.cs" />
     <Compile Include="Areas\Simulation\SimulationAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\APIs\AlignBallBrgsController.cs" />
@@ -1153,11 +1159,13 @@
     <Content Include="Areas\Simulation\App\css\index.css" />
     <Content Include="Areas\Simulation\App\css\simulation.css" />
     <Content Include="Areas\Simulation\App\css\reset.css" />
+    <Content Include="Areas\Simulation\App\imgs\back-to-top-icon.png" />
     <Content Include="Areas\Simulation\App\imgs\cloud-logo.jpg" />
-    <Content Include="Areas\Simulation\App\imgs\head-bg .jpg" />
+    <Content Include="Areas\Simulation\App\imgs\head-bg.jpg" />
     <Content Include="Areas\Simulation\App\js\app.js" />
     <Content Include="Areas\Simulation\App\js\homeCtrl.js" />
     <Content Include="Areas\Simulation\App\js\paraSettingCtrl.js" />
+    <Content Include="Areas\Simulation\App\js\scroll.js" />
     <Content Include="Areas\Simulation\App\js\services.js" />
     <Content Include="Areas\Simulation\App\tpls\home.html" />
     <Content Include="Areas\Simulation\App\tpls\list.html" />
@@ -4738,6 +4746,7 @@
     <Content Include="Areas\Simulation\Mworks\Template\pictures\联轴器.jpg" />
     <Content Include="Areas\Simulation\Mworks\Template\pictures\轴承.jpg" />
     <Content Include="Areas\Simulation\Mworks\Template\pictures\驱动器.jpg" />
+    <Content Include="Areas\Simulation\Mworks\Template\XY_axis\package.txt" />
     <Content Include="Areas\Simulation\Mworks\Template\X_axis\package.txt" />
     <Content Include="Areas\Simulation\Mworks\Template\Y_axis\package.txt" />
     <Content Include="Areas\Simulation\Mworks\Template\Z_axis\package.txt" />
@@ -5036,6 +5045,7 @@
     <Content Include="Areas\Simulation\Mworks\Model\X_axis\realpackage.mo" />
     <Content Include="Areas\Simulation\Mworks\Model\Y_axis\realpackage.mo" />
     <Content Include="Areas\Simulation\Mworks\Model\Z_axis\realpackage.mo" />
+    <Content Include="Areas\Simulation\Mworks\Model\XY_axis\realpackage.mo" />
     <None Include="Properties\PublishProfiles\CNCDataManager - Web Deploy %282%29.pubxml" />
     <Content Include="Areas\Selection\Views\_ViewStart.cshtml" />
     <None Include="Properties\PublishProfiles\CNCDataManager - Web Deploy.pubxml" />
@@ -5919,12 +5929,10 @@
     <Folder Include="Areas\Help\Models\" />
     <Folder Include="Areas\Selection\Models\" />
     <Folder Include="Areas\Simulation\App\tpls\NewFolder1\" />
-    <Folder Include="Areas\Simulation\Models\" />
     <Folder Include="Areas\Simulation\Mworks\Simulation\XY_axis\data\" />
     <Folder Include="Areas\Simulation\Mworks\Simulation\X_axis\data\" />
     <Folder Include="Areas\Simulation\Mworks\Simulation\Y_axis\data\" />
     <Folder Include="Areas\Simulation\Mworks\Simulation\Z_axis\data\" />
-    <Folder Include="Areas\Simulation\Mworks\Template\XY_axis\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

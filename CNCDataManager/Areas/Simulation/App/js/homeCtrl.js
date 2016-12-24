@@ -3,7 +3,7 @@
 simulationCtrl.controller("homeCtrl", function ($scope,$locals) {
 	//控制仿真中间导航栏显示和隐藏
 	var CNCType=$locals.getObject("CNCType");
-	if(CNCType)
+	if(!CNCType)
 	{
 		$scope.navShow=[true,true,true,true,true,true];
 	}

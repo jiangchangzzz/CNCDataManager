@@ -1,4 +1,4 @@
-﻿package X_axis
+﻿package XY_axis
   model PMSM
     //极对数
      parameter Integer p = 1 "Number of pole pairs" 
@@ -4475,7 +4475,9 @@ The potential difference between the connectors <code>p</code> and <code>n</code
         Text(extent = {{86.3, 13.04}, {156.6, -3.272}}, textString = "x"), 
         Text(extent = {{-68, -36}, {74, -102}}, textString = "X_axis_model"), 
         Text(extent = {{-155.4, 7.688}, {-94.34, -16.65}}, textString = "phi_ref")}));
-   
+ Modelica.Blocks.Sources.Sine sine  
+    
+      annotation (Placement(transformation(extent = {{-440, 30}, {-350, 110}})));
     Modelica.Blocks.Interfaces.RealInput m "????" 
       annotation (Placement(transformation(extent = {{-20, -20}, {20, 20}}, rotation = -90, origin = {310, 120}), 
         iconTransformation(origin = {-10, 38}, rotation = -90, extent = {{-12.36, -12.36}, {8, 10}})));
@@ -4500,10 +4502,9 @@ The potential difference between the connectors <code>p</code> and <code>n</code
       annotation (Placement(transformation(extent = {{77.63, -48.37}, {162.4, 36.37}})));
     Drivers.Servo servo
       annotation (Placement(transformation(extent = {{-108.6, 1.444}, {28.56, 138.6}})));
-Modelica.Blocks.Sources.Constant const   
-      annotation (Placement(transformation(extent = {{-440, 30}, {-350, 110}})));
   equation 
-   
+    connect(sine.y, servo.phi_ref)   
+      annotation (Line(points = {{-346, 70}, {-116, 70}, {-116, 79}}, color = {0, 0, 127}));    
     connect(servo.negativeplug, pmsm.positiveplug)
       annotation (Line(points = {{37, 78}, {72, 78}, {72, -6}}));
     connect(pmsm.flange_a, x_axis_mechnical_model.flange_a)
@@ -4522,8 +4523,6 @@ Modelica.Blocks.Sources.Constant const
       annotation (Line(points = {{405, 0}, {405, 6}, {466, 6}}, color = {0, 0, 127}));
     connect(x_axis_mechnical_model.v, v)
       annotation (Line(points = {{406, -36}, {406, -30}, {470, -30}}, color = {0, 0, 127}));
-connect(const.y, servo.phi_ref)    
-      annotation (Line(points = {{-346, 70}, {-116, 70}, {-116, 79}}, color = {0, 0, 127}));          
   end X_axis_model;
-end X_axis;
+end XY_axis;
 

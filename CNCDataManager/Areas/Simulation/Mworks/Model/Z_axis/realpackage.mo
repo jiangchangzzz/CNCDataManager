@@ -4483,7 +4483,7 @@ Modelica.Blocks.Sources.Sine sine
       annotation (Line(points = {{425, 6}, {520, 6}, {520, 10}}, color = {0, 0, 127}));
     connect(z_axis_mechnical_model.z, z)
       annotation (Line(points = {{425, -22}, {425, -20}, {510, -20}}, color = {0, 0, 127}));
-connect(sine.y, servo.phi_ref)
+connect(sine.y, servo.phi_ref) 
       annotation (Line(points = {{-346, 70}, {-116, 70}, {-116, 79}}, color = {0, 0, 127}));  
   end Z_axis_model;
 end Z_axis;

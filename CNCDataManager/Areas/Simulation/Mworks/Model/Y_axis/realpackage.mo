@@ -4520,7 +4520,7 @@ Modelica.Blocks.Sources.Sine sine
       annotation (Line(points = {{412, -31}, {412, -30}, {470, -30}}, color = {0, 0, 127}));
     connect(y_axis_mechnical_model.Fx, Fx)
       annotation (Line(points = {{234, 24}, {202, 24}, {202, 120}}, color = {0, 0, 127}));
-connect(sine.y, servo.phi_ref)   
+connect(sine.y, servo.phi_ref)    
  annotation (Line(points = {{-105, -2}, {-67, -2}, {-67, -4}}, color = {0, 0, 127}));
   end Y_axis_model;
 end Y_axis;
