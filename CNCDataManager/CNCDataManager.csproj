@@ -5042,10 +5042,10 @@
     <Content Include="Areas\Simulation\Mworks\Library\Modelica 2.2.2\VisualBase.mo" />
     <Content Include="Areas\Simulation\Mworks\Library\Modelica 2.2.2\VisualVector.mo" />
     <Content Include="Areas\Simulation\Mworks\Simulation\Z_axis\compiler\Z_axis.Z_axis_model.msf" />
-    <Content Include="Areas\Simulation\Mworks\Model\X_axis\realpackage.mo" />
     <Content Include="Areas\Simulation\Mworks\Model\Y_axis\realpackage.mo" />
     <Content Include="Areas\Simulation\Mworks\Model\Z_axis\realpackage.mo" />
     <Content Include="Areas\Simulation\Mworks\Model\XY_axis\realpackage.mo" />
+    <Content Include="Areas\Simulation\Mworks\Model\X_axis\realpackage.mo" />
     <None Include="Properties\PublishProfiles\CNCDataManager - Web Deploy %282%29.pubxml" />
     <Content Include="Areas\Selection\Views\_ViewStart.cshtml" />
     <None Include="Properties\PublishProfiles\CNCDataManager - Web Deploy.pubxml" />

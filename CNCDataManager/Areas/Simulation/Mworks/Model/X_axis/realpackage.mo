@@ -4104,10 +4104,10 @@ The potential difference between the connectors <code>p</code> and <code>n</code
        c = 96389.8)
       annotation (Placement(transformation(extent = {{-2, -12}, {18, 8}})));
     Modelica.Mechanics.Rotational.Inertia inertia(
-      J = 4e-5)
+      J = 4E-05)
       annotation (Placement(transformation(extent = {{-22, -10}, {-2, 10}})));
     Modelica.Mechanics.Rotational.Inertia inertia1(
-      J = 4e-5)
+      J = 4E-05)
       annotation (Placement(transformation(extent = {{32, -12}, {52, 8}})));
     annotation (Icon(graphics = {
       Text(extent = {{-42, 38}, {50, -20}}, textString = "Coupling"), 
@@ -4152,7 +4152,7 @@ The potential difference between the connectors <code>p</code> and <code>n</code
       Text(extent = {{31.73, -62.08}, {54.07, -72.14}}, textString = "Tf2")}));
      parameter Modelica.SIunits.Height ds6 = 0.04 "丝杠的直径";
     parameter Modelica.SIunits.Area As = Modelica.Constants.pi * (ds6 ^ 2) / 4 "丝杠的截面积";
-    constant Real E = 2.1e11 "丝杠材料的弹性模量，对于钢材E=2.1e5MPa";
+    constant Real E = 210000000000 "丝杠材料的弹性模量，对于钢材E=2.1e5MPa";
     parameter Modelica.SIunits.Length Lsg = 0.8 "两双推轴承之间的距离";
     //Real Ksa "丝杠的轴向刚度";
     //parameter Real KB = 1.12e8 "支撑轴承轴向刚度";
@@ -4162,7 +4162,7 @@ The potential difference between the connectors <code>p</code> and <code>n</code
     parameter Modelica.SIunits.Density midu = 7850 "丝杠的密度，材料为钢";
     parameter Modelica.SIunits.Inertia J6 = Modelica.Constants.pi * midu * L6 * (ds6 ^ 4) / 32 "丝杠的转动惯量";
     parameter Modelica.SIunits.Inertia J0 = J6;
-    constant Real G = 8.2e10 "剪切弹性模量，对钢G=8.2e10（N/m2）";
+    constant Real G = 62000000000 "剪切弹性模量，对钢G=8.2e10（N/m2）";
     parameter Real i = h / (2 * Modelica.Constants.pi);
     //parameter Modelica.SIunits.Length Ls = 1.2 "丝杠的有效长度";
     parameter Modelica.SIunits.Damping Bta1 = 0.09 "丝杠与螺母结合面径向阻尼系数";
@@ -4271,14 +4271,14 @@ The potential difference between the connectors <code>p</code> and <code>n</code
       Text(extent = {{-44, 16}, {71.18, -35.35}}, textString = "Worktable"), 
       Bitmap(extent = {{-38, 26}, {60, -30}}, fileName = "..\\pictures\\直线工作台.jpg")}));
     parameter Modelica.SIunits.Mass M = 100 "工作台质量";
-    parameter Modelica.SIunits.Length h = 0.016 "丝杠的导程";
+    parameter Modelica.SIunits.Length h = 0.012 "丝杠的导程";
     parameter Real i = h / (2 * Modelica.Constants.pi);
-    parameter Modelica.SIunits.Force Cn0 = 60313 "双螺母预紧方式额定动载荷";
-    parameter Real Kn0 = 2.1e11 "产品样本尺寸表中给的接触刚度";
+    parameter Modelica.SIunits.Force Cn0 = 25988 "双螺母预紧方式额定动载荷";
+    parameter Real Kn0 = 1150000000 "产品样本尺寸表中给的接触刚度";
     Modelica.SIunits.Torque Tx "切削负载力矩";
     Modelica.SIunits.Torque Tgf "导轨摩擦力矩";
     Modelica.SIunits.Torque Tbf "丝杠预紧产生的的摩擦力矩";
-    constant Real n = 2.505e9 "预紧滚珠丝杠的效率";
+    constant Real n = 0.952 "预紧滚珠丝杠的效率";
     Modelica.Blocks.Interfaces.RealInput m "工件的质量" 
       annotation (Placement(transformation(origin = {-122, 30}, rotation = -90, extent = {{41.13, 41.13}, {68.56, 68.56}}), 
         iconTransformation(origin = {-28, 56}, rotation = -90, extent = {{9.709, 9.709}, {16.18, 16.18}})));
@@ -4327,7 +4327,7 @@ The potential difference between the connectors <code>p</code> and <code>n</code
       Line(points = {{70, -50}, {-54, -50}, {-54, -49}}, color = {0, 0, 0}, thickness = 0.5), 
       Line(points = {{-54, -49}, {-54, 50}}, color = {0, 0, 0}, thickness = 0.5)}));
   equation 
-   KB1 = 7.6e8;
+   KB1 = 760000000;
     Tf1 = 0.15;
   end FixedBearing;
   model OppositeFixedEndBearing "轴承"
@@ -4346,7 +4346,7 @@ The potential difference between the connectors <code>p</code> and <code>n</code
       Line(points = {{70, -50}, {-54, -50}, {-54, -49}}, color = {0, 0, 0}, thickness = 0.5), 
       Line(points = {{-54, -49}, {-54, 50}}, color = {0, 0, 0}, thickness = 0.5)}));
   equation 
-    KB2 = 7.6e8;
+    KB2 = 760000000;
     Tf2 = 0.15;
   end OppositeFixedEndBearing;
 
@@ -4367,7 +4367,7 @@ The potential difference between the connectors <code>p</code> and <code>n</code
       Line(points = {{-10.76, -30.51}, {-10.76, 30.68}}, color = {0, 0, 0}, thickness = 0.5), 
       Text(extent = {{-6, 10}, {66, -18}}, textString = "Bearing")}));
   equation 
-    KB2 = 7.6e8;
+    KB2 = 760000000;
     Tf2 = 0.15;
   end SupportedEndBearing;
 
@@ -4500,7 +4500,7 @@ The potential difference between the connectors <code>p</code> and <code>n</code
       annotation (Placement(transformation(extent = {{77.63, -48.37}, {162.4, 36.37}})));
     Drivers.Servo servo
       annotation (Placement(transformation(extent = {{-108.6, 1.444}, {28.56, 138.6}})));
-Modelica.Blocks.Sources.Constant const   
+Modelica.Blocks.Sources.Sine sine   
       annotation (Placement(transformation(extent = {{-440, 30}, {-350, 110}})));
   equation 
    
@@ -4522,8 +4522,7 @@ Modelica.Blocks.Sources.Constant const
       annotation (Line(points = {{405, 0}, {405, 6}, {466, 6}}, color = {0, 0, 127}));
     connect(x_axis_mechnical_model.v, v)
       annotation (Line(points = {{406, -36}, {406, -30}, {470, -30}}, color = {0, 0, 127}));
-connect(const.y, servo.phi_ref)    
+connect(sine.y, servo.phi_ref)    
       annotation (Line(points = {{-346, 70}, {-116, 70}, {-116, 79}}, color = {0, 0, 127}));          
   end X_axis_model;
 end X_axis;
-

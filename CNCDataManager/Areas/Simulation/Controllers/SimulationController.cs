@@ -18,9 +18,13 @@ namespace CNCDataManager.Areas.Simulation.Controllers
 
         public string StartSimulation(SimulationPara para)
         {
-            PathSetting path = new PathSetting("X");
+            //设置模型路径
+            PathSetting path = new PathSetting(para.Axis);
+
+            //进行模型替换
             ModelReplace modelReplace = new ModelReplace(path);
-            modelReplace.ReplaceInputByAxis("Constant");
+            modelReplace.ReplaceAll(para);
+
             string result = "ready";
             return result;
         }
